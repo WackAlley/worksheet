@@ -1,0 +1,138 @@
+examples for testing
+
+# x1 * sin(x1 * x2)
+ex1 = expr_node(multiply())
+ex11 = expr_node(sin())
+ex111 = expr_node(multiply())
+ex1.childs = [ex11, x1]
+ex11.childs = [ex111]
+ex111.childs = [x1,x2]
+
+normalex1 = .5 * np.sin(3.3 * .5)
+ic(forward(ex1))
+ic(normalex1)
+# ic(backward(ex1))
+# ic(backward(ex11))
+
+# cos(x1 * x2)
+e1n1 = expr_node(cos())
+e1n11 = expr_node(multiply())
+e1n1.childs = [e1n11]
+e1n11.childs = [x1,x2]
+ic(forward(e1n1))
+ic(np.cos(x1.value * x2.value))
+
+dedx1 = - x2.value * np.sin(x1.value * x2.value)
+dedx2 = - x1.value * np.sin(x1.value * x2.value) 
+ic(dedx1)
+ic(dedx2)
+ic(backwardtotal(e1n1))
+
+# cos(2 * x1)
+e2n1 = expr_node(cos())
+e2n11 = expr_node(multiply())
+e2n111 = expr_node(scalar())
+e2n1.childs = [e2n11]
+e2n11.childs = [x1, e2n111]
+e2n111.childs = [expr_end_node(np.float64(2))]
+
+ic(np.cos(1))
+ic(forward(e2n1))
+# ic(backward(e2n1))
+
+
+# x1 + x2
+e3n1 = expr_node(add())
+e3n1.childs = [x1,x2]
+ic(backwardtotal(e3n1))
+
+# x1 * x2 * x3
+x3 = expr_end_node(float64(4.1))
+e4n1 = expr_node(multiply)
+e4n1.childs = [x1,x2,x3]
+
+
+1 done
+backwards propagating through lambda functions creates an error when the function has multiple arguments. 
+This is why backpropagation of sin functions work with multiple arguments, but not with cos, tanh, log.
+
+lambda x -> lambda self, x
+
+https://stackoverflow.com/questions/51970680/typeerror-lambda-takes-1-positional-argument-but-2-were-given-lambda-expr
+
+now it seems to work; forward function of e2n1 has same value as cos(1)
+
+2 done
+we need a return value for the backwards propagation, some expression to return node.backward_func.
+How does the algorithm determine the derivative with respect to either x1 or x2?
+
+
+creating tensor for end nodes
+
+naming the instances with traceback
+https://stackoverflow.com/questions/1690400/getting-an-instance-name-inside-class-init
+
+
+
+initial code
+
+def backward(node, value = 1):
+    endnodes = []
+    if type(node) is not expr_end_node:
+        child_values = (forward(child) for child in node.childs)
+        if len(node.childs) == 1:
+            return backward(node.childs[0], value * node.func.backward_func(*child_values))
+        else:
+            for child, new_value in zip(node.childs, node.func.backward_func(*child_values), strict=True):
+                return backward(child, value * new_value)
+    else: 
+        node.grad_value += value
+        endnodes.append(node.instance)
+    return value, endnodes
+
+full diagnosis code
+
+def backward(node, variable, value = 1, endvalue = 0):
+    if type(node) is not expr_end_node:
+        child_values = (forward(child) for child in node.childs)
+        if len(node.childs) == 1:
+            backward(node.childs[0], variable, value * node.func.backward_func(*child_values))
+            ic(node.childs[0].instance)
+        else:
+            for child, new_value in zip(node.childs, node.func.backward_func(*child_values), strict=True):
+                ic(child.instance)
+                backward(child, variable, value * new_value)
+    else:
+        if node.instance == variable:
+            ic(str("single loop match"))
+            ic(value) 
+        else:
+            ic(str("single loop mismatch"))
+            value = 0
+            ic(value)
+        ic(str("single loop end"))        
+        ic(value)
+        endvalue += value
+        ic(endvalue)
+    return endvalue
+
+def backwardtotal(node):
+    # results = np.empty([2,1])
+    results = []
+    variables = endnodefinder(node)
+    ic(variables)
+    for variable in variables:
+        ic(str("initiating total loop"))
+        ic(backward(node,variable))
+        results.append(backward(node,variable))
+    return results
+
+
+3 pending
+backwards propagation does not work when additions are involved; as the lambda function requires zero arguments only. Simple additions work, see expample e3n1.
+
+
+4 pending
+node tree depicts scalar constants as their type; it would be better to depict their actual value
+
+
