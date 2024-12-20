@@ -1,0 +1,50 @@
+REPORT-FILE from 12/09/2024 14:17:52.153  written 12/09/2024 14:18:50
+REALTIME: 58.213      
+TOTALSUM: 18791       
+ROISUM: 18791       
+MAXVAL: 243         
+LIVETIME: 57.962      
+cmline0=12/09/2024 14:17:52.153 
+range=8192
+prena=0
+mcsmode=0
+roimin=0
+roimax=8192
+rtpreset=10.000      
+ltpreset=0.000       
+evpreset=0           
+swpreset=1           
+rampmode=0
+rampstart=1024
+rampstep=1
+rampbin=1
+ramplen=1024
+qdacuse=0
+qdac=2048
+dac1use=0
+dac1val=0
+impsel=f
+thrstart=1716
+thr1=1716
+thr2=1716
+thrclk=2482
+diguse=8
+digval=0
+cycles=128
+sequences=1
+mempart=0
+dwelltime=3
+dwellunit=0
+syncout=909
+histlen=0
+autoinc=0 
+;datname=C:\FP\Messdaten 2024\LauraAlex\energieselektion_natrium_detektor2.mcd
+savedata=0
+fmt=asc
+smoothpts=5 
+caluse=1 
+caloff=0.000000
+calfact=1.000000
+calfact2=0
+calfact3=0
+calunit=keV
