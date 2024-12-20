@@ -1,0 +1,6 @@
+icecream
+numpy
+stable_baselines3
+gymnasium
+pygame
+sb3_contrib
