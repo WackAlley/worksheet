@@ -1,0 +1,10 @@
+eigene Implementation einer q_table ist in q_table.py
+ein Beispiel zur Verwendung ist in q_learning_example.py
+in train_qtable_with_diffrent_parametrs.py wird jeweils eine q_table für verschiedenen Parameterwerte trainiert
+die q_table kann gespeichert und geladen werden, in q_table_continue_training_against_itself.py indem gegen sich selbst trainiert wird
+in stabl_baseline_with_punishment_for_wromg_action.py werden alghoritmen aus stable baselines 3 (https://sb3-contrib.readthedocs.io) zum training verwendet, dabei wird die umgebung mit einem wrapper verehen,
+der ungültige aktionen bestraft, diese sind hier also erlaubt, werden aber wenn gemacht durch zufällige ersetzt
+DerTrainingsalghoritmus kann gewählt werden zwischen: A2C, DQN, PPO
+Es gibt auch eine version des PPO alghorimusses, die mit maskierten aktionen umgehen kann, die wird in: stable_basline_models_with_action_mask_selftraining.py und
+stable_basline_models_with_action_mask.py verwendet
+Dies ist bisher der vielversprechenste Ansatz, weitere Parameter müssen hier ausprobiert werden

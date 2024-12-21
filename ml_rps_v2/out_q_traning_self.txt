@@ -1,0 +1,65 @@
+/home/marvin/PycharmProjects/ml_rps_v2/.venv/bin/python /home/marvin/PycharmProjects/ml_rps_v2/q_table_continue_training_against_itself.py 
+result before: wins: 9930, looses: 70
+result after iteration 0: wins: 6431, looses: 3569
+total elapsed time: 127.7149338722229
+result after iteration 1: wins: 6241, looses: 3759
+total elapsed time: 414.90249156951904
+result after iteration 2: wins: 5976, looses: 4024
+total elapsed time: 902.9956443309784
+result after iteration 3: wins: 6082, looses: 3918
+total elapsed time: 1447.0269122123718
+result after iteration 4: wins: 5939, looses: 4061
+total elapsed time: 1864.5631086826324
+result after iteration 5: wins: 5812, looses: 4188
+total elapsed time: 2459.639123916626
+result after iteration 6: wins: 5718, looses: 4282
+total elapsed time: 3074.976092338562
+result after iteration 7: wins: 5715, looses: 4285
+total elapsed time: 3694.60790348053
+result after iteration 8: wins: 5647, looses: 4353
+total elapsed time: 4310.423367738724
+result after iteration 9: wins: 5691, looses: 4309
+total elapsed time: 4958.870125770569
+result after iteration 10: wins: 5745, looses: 4255
+total elapsed time: 5579.707941532135
+result after iteration 11: wins: 5685, looses: 4315
+total elapsed time: 6214.349777936935
+result after iteration 12: wins: 5691, looses: 4309
+total elapsed time: 6892.452181816101
+result after iteration 13: wins: 5687, looses: 4313
+total elapsed time: 7552.001975297928
+result after iteration 14: wins: 5665, looses: 4335
+total elapsed time: 8252.199025392532
+result after iteration 15: wins: 5634, looses: 4366
+total elapsed time: 8897.028651952744
+result after iteration 16: wins: 5695, looses: 4305
+total elapsed time: 9523.004371404648
+result after iteration 17: wins: 5670, looses: 4330
+total elapsed time: 10165.51123380661
+result after iteration 18: wins: 5703, looses: 4297
+total elapsed time: 10790.984357833862
+result after iteration 19: wins: 5749, looses: 4251
+total elapsed time: 11416.185529470444
+result after iteration 20: wins: 5714, looses: 4286
+total elapsed time: 12016.91449022293
+result after iteration 21: wins: 5695, looses: 4305
+total elapsed time: 12674.897011041641
+result after iteration 22: wins: 5601, looses: 4399
+total elapsed time: 13289.117350816727
+result after iteration 23: wins: 5642, looses: 4358
+total elapsed time: 13927.432923316956
+result after iteration 24: wins: 5694, looses: 4306
+total elapsed time: 14588.28165435791
+result after iteration 25: wins: 5724, looses: 4276
+total elapsed time: 15209.379759788513
+result after iteration 26: wins: 5685, looses: 4315
+total elapsed time: 15839.150903224945
+result after iteration 27: wins: 5627, looses: 4373
+total elapsed time: 16466.625544071198
+result after iteration 28: wins: 5647, looses: 4353
+total elapsed time: 17132.368844985962
+result after iteration 29: wins: 5672, looses: 4328
+total elapsed time: 17774.76336145401
+17775.001268148422
+
+Process finished with exit code 0
