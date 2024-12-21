@@ -1,0 +1,156 @@
+/home/marvin/PycharmProjects/ml_rps_v2/.venv/bin/python /home/marvin/PycharmProjects/ml_rps_v2/q_table_continue_training_against_itself.py 
+result before: wins: 9926, looses: 74
+result after iteration 0: wins: 5854, looses: 4146
+total elapsed time: 596.4387490749359
+result after iteration 1: wins: 5725, looses: 4275
+total elapsed time: 1352.7288353443146
+result after iteration 2: wins: 5670, looses: 4330
+total elapsed time: 2073.1485044956207
+result after iteration 3: wins: 5626, looses: 4374
+total elapsed time: 2772.5307812690735
+result after iteration 4: wins: 5632, looses: 4368
+total elapsed time: 3503.8779442310333
+result after iteration 5: wins: 5697, looses: 4303
+total elapsed time: 4240.066166639328
+result after iteration 6: wins: 5654, looses: 4346
+total elapsed time: 4962.983578920364
+result after iteration 7: wins: 5774, looses: 4226
+total elapsed time: 5695.426367282867
+result after iteration 8: wins: 5626, looses: 4374
+total elapsed time: 6434.458565711975
+result after iteration 9: wins: 5712, looses: 4288
+total elapsed time: 7184.746368169785
+result after iteration 10: wins: 5563, looses: 4437
+total elapsed time: 7890.385091781616
+result after iteration 11: wins: 5643, looses: 4357
+total elapsed time: 8631.642994880676
+result after iteration 12: wins: 5563, looses: 4437
+total elapsed time: 9343.81646990776
+result after iteration 13: wins: 5582, looses: 4418
+total elapsed time: 10070.064464092255
+result after iteration 14: wins: 5662, looses: 4338
+total elapsed time: 10802.671499729156
+result after iteration 15: wins: 5769, looses: 4231
+total elapsed time: 11533.412993431091
+result after iteration 16: wins: 5692, looses: 4308
+total elapsed time: 12274.39983701706
+result after iteration 17: wins: 5758, looses: 4242
+total elapsed time: 13024.595654010773
+result after iteration 18: wins: 5674, looses: 4326
+total elapsed time: 13775.00312948227
+result after iteration 19: wins: 5695, looses: 4305
+total elapsed time: 14478.235109329224
+result after iteration 20: wins: 5743, looses: 4257
+total elapsed time: 15198.18358206749
+result after iteration 21: wins: 5741, looses: 4259
+total elapsed time: 15911.117156505585
+result after iteration 22: wins: 5600, looses: 4400
+total elapsed time: 16620.36243057251
+result after iteration 23: wins: 5635, looses: 4365
+total elapsed time: 17352.85357427597
+result after iteration 24: wins: 5677, looses: 4323
+total elapsed time: 18078.059418201447
+result after iteration 25: wins: 5716, looses: 4284
+total elapsed time: 18788.568515062332
+result after iteration 26: wins: 5631, looses: 4369
+total elapsed time: 19531.21092605591
+result after iteration 27: wins: 5697, looses: 4303
+total elapsed time: 20246.48527789116
+result after iteration 28: wins: 5658, looses: 4342
+total elapsed time: 20994.768033266068
+result after iteration 29: wins: 5645, looses: 4355
+total elapsed time: 21754.60471391678
+result after iteration 30: wins: 5761, looses: 4239
+total elapsed time: 22504.315451145172
+result after iteration 31: wins: 5628, looses: 4372
+total elapsed time: 23226.782150506973
+result after iteration 32: wins: 5716, looses: 4284
+total elapsed time: 23951.379638910294
+result after iteration 33: wins: 5668, looses: 4332
+total elapsed time: 24721.114673614502
+result after iteration 34: wins: 5660, looses: 4340
+total elapsed time: 25459.273577451706
+result after iteration 35: wins: 5674, looses: 4326
+total elapsed time: 26172.084262371063
+result after iteration 36: wins: 5625, looses: 4375
+total elapsed time: 26922.91410970688
+result after iteration 37: wins: 5722, looses: 4278
+total elapsed time: 27655.573419570923
+result after iteration 38: wins: 5731, looses: 4269
+total elapsed time: 28381.965671777725
+result after iteration 39: wins: 5709, looses: 4291
+total elapsed time: 29120.198845148087
+result after iteration 40: wins: 5769, looses: 4231
+total elapsed time: 29868.143548488617
+result after iteration 41: wins: 5830, looses: 4170
+total elapsed time: 30580.657788038254
+result after iteration 42: wins: 5755, looses: 4245
+total elapsed time: 31300.39707183838
+result after iteration 43: wins: 5804, looses: 4196
+total elapsed time: 32038.80663204193
+result after iteration 44: wins: 5616, looses: 4384
+total elapsed time: 32751.362020492554
+result after iteration 45: wins: 5688, looses: 4312
+total elapsed time: 33479.42132806778
+result after iteration 46: wins: 5765, looses: 4235
+total elapsed time: 34192.78194832802
+result after iteration 47: wins: 5666, looses: 4334
+total elapsed time: 34949.920461177826
+result after iteration 48: wins: 5726, looses: 4274
+total elapsed time: 35702.77952218056
+result after iteration 49: wins: 5673, looses: 4327
+total elapsed time: 36439.81721639633
+result after iteration 50: wins: 5695, looses: 4305
+total elapsed time: 37163.44312405586
+result after iteration 51: wins: 5731, looses: 4269
+total elapsed time: 37892.5585539341
+result after iteration 52: wins: 5719, looses: 4281
+total elapsed time: 38640.25469708443
+result after iteration 53: wins: 5743, looses: 4257
+total elapsed time: 39403.016584157944
+result after iteration 54: wins: 5677, looses: 4323
+total elapsed time: 40132.64300894737
+result after iteration 55: wins: 5754, looses: 4246
+total elapsed time: 40889.19416308403
+result after iteration 56: wins: 5689, looses: 4311
+total elapsed time: 41674.1274330616
+result after iteration 57: wins: 5662, looses: 4338
+total elapsed time: 42437.45665025711
+result after iteration 58: wins: 5672, looses: 4328
+total elapsed time: 43178.227402448654
+result after iteration 59: wins: 5736, looses: 4264
+total elapsed time: 43893.431169986725
+result after iteration 60: wins: 5634, looses: 4366
+total elapsed time: 44639.30864596367
+result after iteration 61: wins: 5743, looses: 4257
+total elapsed time: 45437.47203707695
+result after iteration 62: wins: 5612, looses: 4388
+total elapsed time: 46206.00182437897
+result after iteration 63: wins: 5753, looses: 4247
+total elapsed time: 46973.09132480621
+result after iteration 64: wins: 5705, looses: 4295
+total elapsed time: 47789.676637887955
+result after iteration 65: wins: 5664, looses: 4336
+total elapsed time: 48543.511190891266
+Traceback (most recent call last):
+  File "/home/marvin/PycharmProjects/ml_rps_v2/q_table_continue_training_against_itself.py", line 33, in <module>
+    wins, looses = evaluation(env_eval, model_self_eval, eval_epochs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marvin/PycharmProjects/ml_rps_v2/utilities/training_and_evaluation.py", line 20, in evaluation
+    observation_next_state, reward, terminated, truncated, info = env.step(action)
+                                                                  ^^^^^^^^^^^^^^^^
+  File "/home/marvin/PycharmProjects/ml_rps_v2/rps_game/env.py", line 98, in step
+    goal_hit = self.game.act(action)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marvin/PycharmProjects/ml_rps_v2/rps_game/game.py", line 260, in act
+    if not self.is_action_valid(action):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marvin/PycharmProjects/ml_rps_v2/rps_game/game.py", line 229, in is_action_valid
+    out_of_bounds = not self.in_bounds(*new_pos)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marvin/PycharmProjects/ml_rps_v2/rps_game/game.py", line 203, in in_bounds
+    def in_bounds(self, x, y):
+
+KeyboardInterrupt
+
+Process finished with exit code 130 (interrupted by signal 2:SIGINT)

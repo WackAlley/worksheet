@@ -1,0 +1,59 @@
+/home/marvin/PycharmProjects/ml_rps_v2/.venv/bin/python /home/marvin/PycharmProjects/ml_rps_v2/stable_basline_models_with_action_mask_selftraining.py 
+gen: 1, result: wins: 478, looses: 22, time: 0.6077113151550293
+gen: 5, result: wins: 446, looses: 54, time: 4.8273093700408936
+gen: 8, result: wins: 433, looses: 67, time: 12.152724742889404
+gen: 9, result: wins: 446, looses: 54, time: 17.470750093460083
+gen: 4, result: wins: 463, looses: 37, time: 20.099760055541992
+gen: 3, result: wins: 464, looses: 36, time: 20.62006902694702
+gen: 7, result: wins: 462, looses: 38, time: 21.99191117286682
+gen: 11, result: wins: 479, looses: 21, time: 52.69825220108032
+gen: 10, result: wins: 460, looses: 40, time: 81.6898946762085
+gen: 15, result: wins: 459, looses: 41, time: 83.75668406486511
+gen: 17, result: wins: 461, looses: 39, time: 39.70518636703491
+gen: 19, result: wins: 429, looses: 71, time: 15.14359974861145
+gen: 20, result: wins: 475, looses: 25, time: 8.3660306930542
+gen: 13, result: wins: 470, looses: 30, time: 133.93532800674438
+gen: 2, result: wins: 465, looses: 35, time: 159.54534792900085
+gen: 18, result: wins: 457, looses: 43, time: 62.16615414619446
+gen: 6, result: wins: 382, looses: 118, time: 197.58544969558716
+gen: 16, result: wins: 425, looses: 75, time: 162.24798011779785
+gen: 26, result: wins: 462, looses: 38, time: 9.408749103546143
+gen: 25, result: wins: 469, looses: 31, time: 170.9059498310089
+gen: 24, result: wins: 452, looses: 48, time: 246.265150308609
+gen: 27, result: wins: 471, looses: 29, time: 182.47534608840942
+gen: 22, result: wins: 473, looses: 27, time: 303.80614161491394
+gen: 30, result: wins: 429, looses: 71, time: 104.92921018600464
+gen: 31, result: wins: 439, looses: 61, time: 119.0151162147522
+
+
+
+
+Fehlend:12 14 21 23
+/home/marvin/PycharmProjects/ml_rps_v2/.venv/bin/python /home/marvin/PycharmProjects/ml_rps_v2/stable_basline_models_with_action_mask_selftraining.py 
+gen: 1, result: wins: 962, looses: 38, time: 1.3240230083465576
+gen: 5, result: wins: 887, looses: 113, time: 7.251945972442627
+gen: 3, result: wins: 938, looses: 62, time: 21.3690345287323
+gen: 8, result: wins: 878, looses: 122, time: 25.78228783607483
+gen: 7, result: wins: 933, looses: 67, time: 35.45170283317566
+gen: 9, result: wins: 894, looses: 106, time: 34.190080642700195
+gen: 4, result: wins: 918, looses: 82, time: 108.9200119972229
+gen: 11, result: wins: 967, looses: 33, time: 112.98615598678589
+gen: 10, result: wins: 904, looses: 96, time: 206.41412234306335
+gen: 6, result: wins: 736, looses: 264, time: 299.0707085132599
+gen: 17, result: wins: 896, looses: 104, time: 127.72668480873108
+gen: 2, result: wins: 907, looses: 93, time: 358.5065608024597
+gen: 20, result: wins: 944, looses: 56, time: 17.955191373825073
+gen: 19, result: wins: 856, looses: 144, time: 35.83227014541626
+gen: 22, result: wins: 964, looses: 36, time: 71.82415175437927
+gen: 18, result: wins: 902, looses: 98, time: 186.27544498443604
+gen: 15, result: wins: 924, looses: 76, time: 385.30793833732605
+gen: 16, result: wins: 853, looses: 147, time: 389.46575379371643
+gen: 26, result: wins: 907, looses: 93, time: 20.839466333389282
+gen: 25, result: wins: 938, looses: 62, time: 220.54044651985168
+gen: 24, result: wins: 926, looses: 74, time: 397.6463017463684
+gen: 27, result: wins: 949, looses: 51, time: 418.0572533607483
+gen: 30, result: wins: 836, looses: 164, time: 336.12790727615356
+gen: 31, result: wins: 866, looses: 134, time: 281.2734932899475
+gen: 13, result: wins: 949, looses: 51, time: 1871.4697716236115
+gen: 14, result: wins: 901, looses: 99, time: 3808.0740129947662
+
