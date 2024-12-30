@@ -1,0 +1,24 @@
+In most practical circumstances, it is appropriate to
+assume a Poisson distribution, which, if the number
+of counts is large, can be approximated by a Normal
+(Gaussian) distribution.
+-- practical gamma spectroscopy page 128 (pdf 148)
+
+
+
+A modern digital gamma-ray spectrum is in essence a
+list of numbers of pulses measured within small consec-
+utive pulse height ranges. Detector calibration allows the
+gamma-ray spectrum to be interpreted in terms of energy,
+rather than channel number or voltage, and amount of
+radionuclide, rather than number of pulses. In addition,
+especially if computer analysis of the spectrum is contem-
+plated, it may be necessary to provide information about
+the peak width variation with energy or channel number.
+-- practical page 143 (pdf 156)
+
+
+This change in primary electron energy, which
+is called the field increment effect, will be reflected in
+the number of electron–hole pairs produced
+-- page 146 (pdf 159)

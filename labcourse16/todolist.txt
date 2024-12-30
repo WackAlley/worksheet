@@ -1,0 +1,36 @@
+1 Sodium
+1.1
+---a) Energiespectrum, gaussian parametrisation
+---b) calibration y = mx + b
+c) error of m and b
+---d) calibrated energy spectrum
+
+1.2
+---a) y = mx time delay
+---b) gaussian parametrisation
+---c) FWHM -> 2a in ns
+d) error
+
+1.3 coincidence 511 511
+---a) plot x(angle) y (count)
+---b) y in count/s
+c) error
+
+1.4 coincidence 511 1275
+---a) plot
+b) are gamma quants correlated?
+c) we expect lower count rate, why? Why didn't it happen here?
+
+
+2 Cobalt
+2.1
+---a) energy calibration
+---b) gaussian parametrisation (although background can be fitted better)
+c) compare peaks with literature values
+
+2.2
+---a) Q Value
+---b) tabular: theta angle, Z_1, Z_2, Z_K e, W(theta)
+---c) write down angular correlation function
+---d) compare measured angular correlation with theoretical
+e) Qvalue error, tabular error
