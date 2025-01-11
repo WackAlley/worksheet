@@ -41,11 +41,10 @@ if __name__ == "__main__":
 
         # Initialisiere die Umgebung ohne Gegner (wird später gesetzt)
         #env = RPSEnv(render_mode=None, opponent=None, size=4, n_holes=2)
-
-        model = MaskablePPO.load(f"model_Generation_{30}_a")
+ 
         env = RPSEnv(render_mode=None, opponent=RandomOpponent(), size=4, n_holes=2)
-
         env = ActionMasker(env, mask_fn)
+        #model = MaskablePPO.load(path=f"model_Generation_{45}_a", env=env, learning_rate=5e-4, gamma=0.9) 
 
         # Initialisiere das Modell
         if algorithm_choice == "PPO_mask":
