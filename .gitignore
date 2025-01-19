@@ -1,6 +1,8 @@
 /project3/.venv
 /project3/*.zip
 /project3/unpacked_directories/
+/project3/test_2vs2
+/project3/training_results
 /labcourse16/todolist.txt
 /labcourse16/sources
 /labcourse16/aas_macros.sty
