@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{feynmp}
+
+\begin{document}
+
+\begin{figure}[h!]
+    \centering
+    \begin{fmffile}{eplus_eminus_annihilation}
+        \begin{fmfgraph*}(200,100)
+            \fmfleft{i1,i2}
+            \fmfright{o1}
+            \fmf{fermion}{i1,v1,i2}
+            \fmf{photon}{v1,o1}
+            \fmfdot{v1}
+        \end{fmfgraph*}
+    \end{fmffile}
+    \caption{Feynman diagram for electron-positron annihilation into a photon.}
+    \label{fig:annihilation}
+\end{figure}
+
+
+
+
+\end{document}

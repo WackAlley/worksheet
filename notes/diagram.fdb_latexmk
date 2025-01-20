@@ -1,0 +1,26 @@
+# Fdb version 4
+["pdflatex"] 1737357094.49025 "diagram.tex" "diagram.pdf" "diagram" 1737357094.6671 0
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1721433600 71627 94eb9990bed73c364d7f53f960cc8c5b ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1721433600 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1721433600 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
+  "/usr/share/texlive/texmf-dist/tex/latex/feynmf/feynmp.sty" 1137110140 12551 0cf5c597a9c40bdc431f5ce226479b5a ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty" 1654720880 18387 8f900a490197ebaf93c02ae9476d4b09 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty" 1654720880 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1673989714 30429 213676d4c7327a21d91ddaed900e7b81 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1721433600 40900 887e0dc8cac988a9e9c574af364cf837 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1731852262.97518 4602615 ac1019cb4c4ba39710c2cf7f752b378d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731852060 7753262 4f4cdf97fa92e9710719d4d8ba7ff6ce ""
+  "diagram.aux" 1737357094.65145 236 bbc5b6a5012cfc90a0ee64dbfe63358d "pdflatex"
+  "diagram.tex" 1737357093.34145 508 6ec02c7bf29bee358ed370e30ced2d57 ""
+  "eplus_eminus_annihilation.1" 0 -1 0 ""
+  (generated)
+  "diagram.aux"
+  "diagram.log"
+  "diagram.pdf"
+  "eplus_eminus_annihilation.mp"
+  (rewritten before read)
