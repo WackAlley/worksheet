@@ -1,0 +1,18 @@
+\contentsline {title}{\relax \fontsize {12}{14}\selectfont Versuchsprotokoll - 16: Gammaquanten-Koinzidenzspektroskopie}{2}{section*.2}%
+\contentsline {abstract}{Abstract}{2}{section*.1}%
+\tocdepth@munge 
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Einführung}{4}{section.1}%
+\contentsline {section}{\numberline {II}Theoretischer Hintergrund}{4}{section.2}%
+\contentsline {subsection}{\numberline {A}Kernzerfälle}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {B}Winkelkorrelation}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {C}Interaktionen und Detektion des Gammaquants}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {D}Koinzidenzspektroskopie}{9}{subsection.2.4}%
+\contentsline {section}{\numberline {III}Signalverarbeitung}{11}{section.3}%
+\contentsline {section}{\numberline {IV}Durchführung}{12}{section.4}%
+\contentsline {subsection}{\numberline {A}Energiegesamtspektra; Kalibration Kanallage-Energie}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {B}Time-delay Spektra, Kalibration Kanallage-Zeit}{18}{subsection.4.2}%
+\contentsline {subsection}{\numberline {C}Koinzidenzmessungen}{22}{subsection.4.3}%
+\contentsline {section}{\numberline {V}Diskussion}{24}{section.5}%
+\contentsline {section}{\numberline {VI}Fazit}{24}{section.6}%
+\contentsline {section}{\numberline {VII}Anhang}{24}{section.7}%

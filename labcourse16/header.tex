@@ -1,0 +1,708 @@
+% ******************************************************
+% ******************** BEGIN HEADER ********************
+% ******************************************************
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%PACKAGES
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{braket}
+
+\usepackage{algorithm, algcompatible}
+\usepackage{amsmath}	% AMS Math Package
+\usepackage{amsthm}		% Theorem Formatting
+\usepackage{amssymb}	% Math symbols such as \mathbb
+\usepackage{anyfontsize}
+\usepackage{booktabs}
+
+\usepackage{mathrsfs, mathtools}
+
+\usepackage{letltxmacro} % closed roots
+\usepackage{caption}
+\captionsetup{justification=centering}
+\usepackage{color}
+%\usepackage{verbatim}
+\usepackage{bm}
+%\usepackage{float}
+
+\usepackage{tgpagella}
+
+\usepackage{graphicx}
+%\usepackage{xcolor}
+
+\usepackage{fancyhdr}
+\usepackage{float}
+
+\usepackage{lastpage}
+
+\usepackage{titlesec}
+
+\usepackage{rotating}
+\usepackage{setspace}
+
+\usepackage[printonlyused]{acronym}
+\usepackage{aas_macros}
+
+%\usepackage{multirow}
+\usepackage{datetime}
+
+\usepackage{lettrine}
+
+\usepackage{multirow}
+\usepackage{parskip}
+\usepackage{subcaption}
+
+
+\usepackage[colorlinks=true
+,urlcolor=DARKBLUE
+,anchorcolor=DARKBLUE
+,citecolor=DARKBLUE
+,filecolor=DARKBLUE
+,linkcolor=DARKBLUE
+,menucolor=DARKBLUE
+%,pagecolor=DARKBLUE
+%,linktocpage=true
+%,pdfproducer=medialab
+%,pdfa=true
+]{hyperref}
+%\hypersetup{
+ %   colorlinks,
+  %  linkcolor={red!50!black},
+   % citecolor={blue!50!black},
+    %urlcolor={blue!80!black}
+%}
+
+%\usepackage[square, sort, comma, numbers]{natbib}
+
+\def\bibsection{} %remove black horizontal line before references
+
+\titleformat{\section}
+       {\centering\normalfont\fontsize{14}{17}\bfseries}{\thesection}{1em}{}
+
+\numberwithin{equation}{section}
+
+\renewcommand{\figurename}{{\bf Figure}}
+\renewcommand{\tablename}{{\bf Table}}
+
+\makeatletter 
+    \renewcommand{\thefigure}{{\bf\@arabic\c@figure}}
+\makeatother
+
+%\makeatletter
+%\renewenvironment{abstract}{%
+%    \begin{center}%
+
+%       {\bfseries \Large\abstractname\vspace{\z@}}%  %% <- here I've added \Large
+%     \end{center}%
+%    \quotation}
+%\makeatother
+
+%\acrodef{CDM}[CDM]{cold dark matter}
+%\acrodef{CDM}[CDM]{cold dark matter}
+%\acrodef{CMB}[CMB]{cosmic microwave background}
+%\acrodef{EoM}[EoM]{equation of motion}
+%    \acrodefplural{EoM}[EoMs]{equations of motion}
+%\acrodef{LSS}[LSS]{large scale structure}
+%\acrodef{NG}[NG]{non-Gaussianity}
+%    \acrodefplural{NG}[NGs]{non-Gaussianities}
+%\acrodef{PBH}[PBH]{primordial black hole}
+%    \acrodefplural{PBH}[PBHs]{primordial black holes}
+%\acrodef{SR}[SR]{slow-roll}
+%\acrodef{WIMP}[WIMP]{weakly-interacting massive particle}
+%    \acrodefplural{WIMP}[WIMPs]{weakly-interacting massive particles}
+    
+%\acrodef{PBH}{primordial black hole}
+%\acrodef{SR}{slow-roll}
+%\acrodef{NG}{non-Gaussianity}
+%\acrodef{EoM}{equation of motion}
+%\acrodef{CMB}{cosmic microwave background}
+%\acrodef{LSS}{large scale structure}
+
+%\bibliographystyle{apsrev4-2}
+
+\usepackage{tcolorbox}
+%\definecolor{block-gray}{gray}{0.92}
+%\newtcolorbox{newquote}{colback=block-gray, grow to right by=-5mm, grow to left by=-5mm, boxrule=1pt, boxsep=5pt, breakable
+%}
+
+
+\fancyhf{}
+\chead[odd]{
+Versuchsprotokoll - 16: $\gamma - \gamma-$Koinzidenzen
+\vphantom{$_{_{_{}}}$}}
+
+\cfoot{ \fancyplain{}{-- \thepage}/{\pageref{LastPage}} --}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%COLOURS
+%existing: black, white, blue, red, green, yellow
+\definecolor{grey}{rgb}{0.4,0.4,0.4}
+\definecolor{dullmagenta}{rgb}{0.4,0,0.4}
+\definecolor{darkblue}{rgb}{0,0,0.4}
+\definecolor{midblue}{rgb}{0,0,0.7}
+\definecolor{midred}{rgb}{0.5,0,0}
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{lightbrown}{rgb}{0.75,0.5,0.25}
+\definecolor{tan}{cmyk}{0.14,0.42,0.56,0}
+\definecolor{djunglegreen}{cmyk}{0.99,0,0.52,0}
+\definecolor{lightgreen}{rgb}{0,1,0}
+\definecolor{olivegreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{midgreen}{rgb}{0.0,0.675,0.0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{pink}{rgb}{1,0.078,0.57}
+
+\definecolor{MONZA}{HTML}{CF000F}
+\definecolor{DARKBLUE}{HTML}{00008b}
+\definecolor{DARKMAGENTA}{HTML}{8b008b}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%NORMS
+\newcommand{\normsingle}[1]{\left|{#1}\right|}
+\newcommand{\normdouble}[1]{\left\|{#1}\right\|}
+%\newcommand{\normtriple}[1]{\left\interleave{#1}\right\interleave} % requires ``stmaryrd'' package
+%\newcommand{\norm}[1]{\normdouble{#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%SHIFTS
+\newcommand{\q}{\quad}
+%\newcommand{\qq}{\qquad}
+\newcommand{\qqq}{\qquad\quad}
+\newcommand{\qqqq}{\qquad\qquad}
+\newcommand{\vs}{\vspace}
+\newcommand{\hs}{\hspace}
+\renewcommand{\.}{\hspace{0.5mm}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%CLOSED ROOTS
+\makeatletter
+\let\oldr@@t\r@@t
+\def\r@@t#1#2{%
+\setbox0=\hbox{$\oldr@@t#1{#2\,}$}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+\LetLtxMacro{\oldsqrt}{\sqrt}
+\renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2}}
+\makeatother
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%ARROWS
+\newcommand{\ra}{\ensuremath{\rightarrow}}
+\newcommand{\la}{\ensuremath{\leftarrow}}
+\newcommand{\Ra}{\ensuremath{\Rightarrow}}
+\newcommand{\La}{\ensuremath{\Leftarrow}}
+\newcommand{\lra}{\ensuremath{\leftrightarrow}}
+\newcommand{\Lra}{\ensuremath{\Leftrightarrow}}
+\newcommand{\Ral}{\ensuremath{\Longrightarrow}}
+\newcommand{\Lal}{\ensuremath{\Longleftarrow}}
+\newcommand{\Lral}{\ensuremath{\Longleftrightarrow}}
+\newcommand{\lral}{\ensuremath{\ongleftrightarrow}}
+\newcommand{\ral}{\ensuremath{\longrightarrow}}
+\newcommand{\lal}{\ensuremath{\longleftarrow}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%MATHEMATICS
+
+%%%capital \mathrm
+\newcommand{\Arm}{\ensuremath{\mathrm{A}}}
+\newcommand{\Brm}{\ensuremath{\mathrm{B}}}
+\newcommand{\Crm}{\ensuremath{\mathrm{C}}}
+\newcommand{\Drm}{\ensuremath{\mathrm{D}}}
+\newcommand{\Erm}{\ensuremath{\mathrm{E}}}
+\newcommand{\Frm}{\ensuremath{\mathrm{F}}}
+\newcommand{\Grm}{\ensuremath{\mathrm{G}}}
+\newcommand{\Hrm}{\ensuremath{\mathrm{H}}}
+\newcommand{\Irm}{\ensuremath{\mathrm{I}}}
+\newcommand{\Jrm}{\ensuremath{\mathrm{J}}}
+\newcommand{\Krm}{\ensuremath{\mathrm{K}}}
+\newcommand{\Lrm}{\ensuremath{\mathrm{L}}}
+\newcommand{\Mrm}{\ensuremath{\mathrm{M}}}
+\newcommand{\Nrm}{\ensuremath{\mathrm{N}}}
+\newcommand{\Orm}{\ensuremath{\mathrm{O}}}
+\newcommand{\Prm}{\ensuremath{\mathrm{P}}}
+\newcommand{\Qrm}{\ensuremath{\mathrm{Q}}}
+\newcommand{\Rrm}{\ensuremath{\mathrm{R}}}
+\newcommand{\Srm}{\ensuremath{\mathrm{S}}}
+\newcommand{\Trm}{\ensuremath{\mathrm{T}}}
+\newcommand{\Urm}{\ensuremath{\mathrm{U}}}
+\newcommand{\Vrm}{\ensuremath{\mathrm{V}}}
+\newcommand{\Wrm}{\ensuremath{\mathrm{W}}}
+\newcommand{\Xrm}{\ensuremath{\mathrm{X}}}
+\newcommand{\Yrm}{\ensuremath{\mathrm{Y}}}
+\newcommand{\Zrm}{\ensuremath{\mathrm{Z}}}
+%%%small \mathrm
+\newcommand{\arm}{\ensuremath{\mathrm{a}}}
+\newcommand{\brm}{\ensuremath{\mathrm{b}}}
+\newcommand{\crm}{\ensuremath{\mathrm{c}}}
+\newcommand{\drm}{\ensuremath{\mathrm{d}}}
+\newcommand{\erm}{\ensuremath{\mathrm{e}}}
+\newcommand{\frm}{\ensuremath{\mathrm{f}}}
+\newcommand{\grm}{\ensuremath{\mathrm{g}}}
+\newcommand{\hrm}{\ensuremath{\mathrm{h}}}
+\newcommand{\irm}{\ensuremath{\mathrm{i}}}
+\newcommand{\jrm}{\ensuremath{\mathrm{j}}}
+\newcommand{\krm}{\ensuremath{\mathrm{k}}}
+\newcommand{\lrm}{\ensuremath{\mathrm{l}}}
+\newcommand{\mrm}{\ensuremath{\mathrm{m}}}
+\newcommand{\nrm}{\ensuremath{\mathrm{n}}}
+\newcommand{\orm}{\ensuremath{\mathrm{o}}}
+\newcommand{\prm}{\ensuremath{\mathrm{p}}}
+\newcommand{\qrm}{\ensuremath{\mathrm{q}}}
+\newcommand{\rrm}{\ensuremath{\mathrm{r}}}
+\newcommand{\srm}{\ensuremath{\mathrm{s}}}
+\newcommand{\trm}{\ensuremath{\mathrm{t}}}
+\newcommand{\urm}{\ensuremath{\mathrm{u}}}
+\newcommand{\vrm}{\ensuremath{\mathrm{v}}}
+\newcommand{\wrm}{\ensuremath{\mathrm{w}}}
+\newcommand{\xrm}{\ensuremath{\mathrm{x}}}
+\newcommand{\yrm}{\ensuremath{\mathrm{y}}}
+\newcommand{\zrm}{\ensuremath{\mathrm{z}}}
+
+%%%capital \mathcal
+\newcommand{\Acal}{\ensuremath{\mathcal{A}}}
+\newcommand{\Bcal}{\ensuremath{\mathcal{B}}}
+\newcommand{\Ccal}{\ensuremath{\mathcal{C}}}
+\newcommand{\Dcal}{\ensuremath{\mathcal{D}}}
+\newcommand{\Ecal}{\ensuremath{\mathcal{E}}}
+\newcommand{\Fcal}{\ensuremath{\mathcal{F}}}
+\newcommand{\Gcal}{\ensuremath{\mathcal{G}}}
+\newcommand{\Hcal}{\ensuremath{\mathcal{H}}}
+\newcommand{\Ical}{\ensuremath{\mathcal{I}}}
+\newcommand{\Jcal}{\ensuremath{\mathcal{J}}}
+\newcommand{\Kcal}{\ensuremath{\mathcal{K}}}
+\newcommand{\Lcal}{\ensuremath{\mathcal{L}}}
+\newcommand{\Mcal}{\ensuremath{\mathcal{M}}}
+\newcommand{\Ncal}{\ensuremath{\mathcal{N}}}
+\newcommand{\Ocal}{\ensuremath{\mathcal{O}}}
+\newcommand{\Pcal}{\ensuremath{\mathcal{P}}}
+\newcommand{\Qcal}{\ensuremath{\mathcal{Q}}}
+\newcommand{\Rcal}{\ensuremath{\mathcal{R}}}
+\newcommand{\Scal}{\ensuremath{\mathcal{S}}}
+\newcommand{\Tcal}{\ensuremath{\mathcal{T}}}
+\newcommand{\Ucal}{\ensuremath{\mathcal{U}}}
+\newcommand{\Vcal}{\ensuremath{\mathcal{V}}}
+\newcommand{\Wcal}{\ensuremath{\mathcal{W}}}
+\newcommand{\Xcal}{\ensuremath{\mathcal{X}}}
+\newcommand{\Ycal}{\ensuremath{\mathcal{Y}}}
+\newcommand{\Zcal}{\ensuremath{\mathcal{Z}}}
+
+%%%capital \mathsf
+\newcommand{\Asf}{\ensuremath{\mathsf{A}}}
+\newcommand{\Bsf}{\ensuremath{\mathsf{B}}}
+\newcommand{\Csf}{\ensuremath{\mathsf{C}}}
+\newcommand{\Dsf}{\ensuremath{\mathsf{D}}}
+\newcommand{\Esf}{\ensuremath{\mathsf{E}}}
+\newcommand{\Fsf}{\ensuremath{\mathsf{F}}}
+\newcommand{\Gsf}{\ensuremath{\mathsf{G}}}
+\newcommand{\Hsf}{\ensuremath{\mathsf{H}}}
+\newcommand{\Isf}{\ensuremath{\mathsf{I}}}
+\newcommand{\Jsf}{\ensuremath{\mathsf{J}}}
+\newcommand{\Ksf}{\ensuremath{\mathsf{K}}}
+\newcommand{\Lsf}{\ensuremath{\mathsf{L}}}
+\newcommand{\Msf}{\ensuremath{\mathsf{M}}}
+\newcommand{\Nsf}{\ensuremath{\mathsf{N}}}
+\newcommand{\Osf}{\ensuremath{\mathsf{O}}}
+\newcommand{\Psf}{\ensuremath{\mathsf{P}}}
+\newcommand{\Qsf}{\ensuremath{\mathsf{Q}}}
+\newcommand{\Rsf}{\ensuremath{\mathsf{R}}}
+\newcommand{\Ssf}{\ensuremath{\mathsf{S}}}
+\newcommand{\Tsf}{\ensuremath{\mathsf{T}}}
+\newcommand{\Usf}{\ensuremath{\mathsf{U}}}
+\newcommand{\Vsf}{\ensuremath{\mathsf{V}}}
+\newcommand{\Wsf}{\ensuremath{\mathsf{W}}}
+\newcommand{\Xsf}{\ensuremath{\mathsf{X}}}
+\newcommand{\Ysf}{\ensuremath{\mathsf{Y}}}
+\newcommand{\Zsf}{\ensuremath{\mathsf{Z}}}
+%%%small \mathcal
+\newcommand{\asf}{\ensuremath{\mathsf{a}}}
+\newcommand{\bsf}{\ensuremath{\mathsf{b}}}
+\newcommand{\csf}{\ensuremath{\mathsf{c}}}
+\newcommand{\dsf}{\ensuremath{\mathsf{d}}}
+\newcommand{\esf}{\ensuremath{\mathsf{e}}}
+\newcommand{\fsf}{\ensuremath{\mathsf{f}}}
+\newcommand{\gsf}{\ensuremath{\mathsf{g}}}
+\newcommand{\hsf}{\ensuremath{\mathsf{h}}}
+\newcommand{\isf}{\ensuremath{\mathsf{i}}}
+\newcommand{\jsf}{\ensuremath{\mathsf{j}}}
+\newcommand{\ksf}{\ensuremath{\mathsf{k}}}
+\newcommand{\lsf}{\ensuremath{\mathsf{l}}}
+\newcommand{\msf}{\ensuremath{\mathsf{m}}}
+\newcommand{\nsf}{\ensuremath{\mathsf{n}}}
+\newcommand{\osf}{\ensuremath{\mathsf{o}}}
+\newcommand{\psf}{\ensuremath{\mathsf{p}}}
+\newcommand{\qsf}{\ensuremath{\mathsf{q}}}
+\newcommand{\rsf}{\ensuremath{\mathsf{r}}}
+\newcommand{\ssf}{\ensuremath{\mathsf{s}}}
+\newcommand{\tsf}{\ensuremath{\mathsf{t}}}
+\newcommand{\usf}{\ensuremath{\mathsf{u}}}
+\newcommand{\vsf}{\ensuremath{\mathsf{v}}}
+\newcommand{\wsf}{\ensuremath{\mathsf{w}}}
+\newcommand{\xsf}{\ensuremath{\mathsf{x}}}
+\newcommand{\ysf}{\ensuremath{\mathsf{y}}}
+\newcommand{\zsf}{\ensuremath{\mathsf{z}}}
+
+%%%capital \mathbb
+\newcommand{\Abb}{\ensuremath{\mathbb{A}}}
+\renewcommand{\Bbb}{\ensuremath{\mathbb{B}}}
+\newcommand{\Cbb}{\ensuremath{\mathbb{C}}}
+\newcommand{\Dbb}{\ensuremath{\mathbb{D}}}
+\newcommand{\Ebb}{\ensuremath{\mathbb{E}}}
+\newcommand{\Fbb}{\ensuremath{\mathbb{F}}}
+\newcommand{\Gbb}{\ensuremath{\mathbb{G}}}
+\newcommand{\Hbb}{\ensuremath{\mathbb{H}}}
+\newcommand{\Ibb}{\ensuremath{\mathbb{I}}}
+\newcommand{\Jbb}{\ensuremath{\mathbb{J}}}
+\newcommand{\Kbb}{\ensuremath{\mathbb{K}}}
+\newcommand{\Lbb}{\ensuremath{\mathbb{L}}}
+\newcommand{\Mbb}{\ensuremath{\mathbb{M}}}
+\newcommand{\Nbb}{\ensuremath{\mathbb{N}}}
+\newcommand{\Obb}{\ensuremath{\mathbb{O}}}
+\newcommand{\Pbb}{\ensuremath{\mathbb{P}}}
+\newcommand{\Qbb}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Rbb}{\ensuremath{\mathbb{R}}}
+\newcommand{\Sbb}{\ensuremath{\mathbb{S}}}
+\newcommand{\Tbb}{\ensuremath{\mathbb{T}}}
+\newcommand{\Ubb}{\ensuremath{\mathbb{U}}}
+\newcommand{\Vbb}{\ensuremath{\mathbb{V}}}
+\newcommand{\Wbb}{\ensuremath{\mathbb{W}}}
+\newcommand{\Xbb}{\ensuremath{\mathbb{X}}}
+\newcommand{\Ybb}{\ensuremath{\mathbb{Y}}}
+\newcommand{\Zbb}{\ensuremath{\mathbb{Z}}}
+%%%small \mathbb
+\newcommand{\abb}{\ensuremath{\mathbb{a}}}
+\newcommand{\bbb}{\ensuremath{\mathbb{b}}}
+\newcommand{\cbb}{\ensuremath{\mathbb{c}}}
+\newcommand{\dbb}{\ensuremath{\mathbb{d}}}
+\newcommand{\ebb}{\ensuremath{\mathbb{e}}}
+\newcommand{\fbb}{\ensuremath{\mathbb{f}}}
+\newcommand{\gbb}{\ensuremath{\mathbb{g}}}
+\newcommand{\hbb}{\ensuremath{\mathbb{h}}}
+\newcommand{\ibb}{\ensuremath{\mathbb{i}}}
+\newcommand{\jbb}{\ensuremath{\mathbb{j}}}
+\newcommand{\kbb}{\ensuremath{\mathbb{k}}}
+\newcommand{\lbb}{\ensuremath{\mathbb{l}}}
+\newcommand{\mbb}{\ensuremath{\mathbb{m}}}
+\newcommand{\nbb}{\ensuremath{\mathbb{n}}}
+\newcommand{\obb}{\ensuremath{\mathbb{o}}}
+\newcommand{\pbb}{\ensuremath{\mathbb{p}}}
+\newcommand{\qbb}{\ensuremath{\mathbb{q}}}
+\newcommand{\rbb}{\ensuremath{\mathbb{r}}}
+\newcommand{\sbb}{\ensuremath{\mathbb{s}}}
+\newcommand{\tbb}{\ensuremath{\mathbb{t}}}
+\newcommand{\ubb}{\ensuremath{\mathbb{u}}}
+\newcommand{\vbb}{\ensuremath{\mathbb{v}}}
+\newcommand{\wbb}{\ensuremath{\mathbb{w}}}
+\newcommand{\xbb}{\ensuremath{\mathbb{x}}}
+\newcommand{\ybb}{\ensuremath{\mathbb{y}}}
+\newcommand{\zbb}{\ensuremath{\mathbb{z}}}
+
+%%%capital \mathbbm
+\newcommand{\Abbm}{\ensuremath{\mathbbm{A}}}
+\newcommand{\Bbbm}{\ensuremath{\mathbbm{B}}}
+\newcommand{\Cbbm}{\ensuremath{\mathbbm{C}}}
+\newcommand{\Dbbm}{\ensuremath{\mathbbm{D}}}
+\newcommand{\Ebbm}{\ensuremath{\mathbbm{E}}}
+\newcommand{\Fbbm}{\ensuremath{\mathbbm{F}}}
+\newcommand{\Gbbm}{\ensuremath{\mathbbm{G}}}
+\newcommand{\Hbbm}{\ensuremath{\mathbbm{H}}}
+\newcommand{\Ibbm}{\ensuremath{\mathbbm{I}}}
+\newcommand{\Jbbm}{\ensuremath{\mathbbm{J}}}
+\newcommand{\Kbbm}{\ensuremath{\mathbbm{K}}}
+\newcommand{\Lbbm}{\ensuremath{\mathbbm{L}}}
+\newcommand{\Mbbm}{\ensuremath{\mathbbm{M}}}
+\newcommand{\Nbbm}{\ensuremath{\mathbbm{N}}}
+\newcommand{\Obbm}{\ensuremath{\mathbbm{O}}}
+\newcommand{\Pbbm}{\ensuremath{\mathbbm{P}}}
+\newcommand{\Qbbm}{\ensuremath{\mathbbm{Q}}}
+\newcommand{\Rbbm}{\ensuremath{\mathbbm{R}}}
+\newcommand{\Sbbm}{\ensuremath{\mathbbm{S}}}
+\newcommand{\Tbbm}{\ensuremath{\mathbbm{T}}}
+\newcommand{\Ubbm}{\ensuremath{\mathbbm{U}}}
+\newcommand{\Vbbm}{\ensuremath{\mathbbm{V}}}
+\newcommand{\Wbbm}{\ensuremath{\mathbbm{W}}}
+\newcommand{\Xbbm}{\ensuremath{\mathbbm{X}}}
+\newcommand{\Ybbm}{\ensuremath{\mathbbm{Y}}}
+\newcommand{\Zbbm}{\ensuremath{\mathbbm{Z}}}
+%%%small \mathbbm
+\newcommand{\abbm}{\ensuremath{\mathbbm{a}}}
+\newcommand{\bbbm}{\ensuremath{\mathbbm{b}}}
+\newcommand{\cbbm}{\ensuremath{\mathbbm{c}}}
+\newcommand{\dbbm}{\ensuremath{\mathbbm{d}}}
+\newcommand{\ebbm}{\ensuremath{\mathbbm{e}}}
+\newcommand{\fbbm}{\ensuremath{\mathbbm{f}}}
+\newcommand{\gbbm}{\ensuremath{\mathbbm{g}}}
+\newcommand{\hbbm}{\ensuremath{\mathbbm{h}}}
+\newcommand{\ibbm}{\ensuremath{\mathbbm{i}}}
+\newcommand{\jbbm}{\ensuremath{\mathbbm{j}}}
+\newcommand{\kbbm}{\ensuremath{\mathbbm{k}}}
+\newcommand{\lbbm}{\ensuremath{\mathbbm{l}}}
+\newcommand{\mbbm}{\ensuremath{\mathbbm{m}}}
+\newcommand{\nbbm}{\ensuremath{\mathbbm{n}}}
+\newcommand{\obbm}{\ensuremath{\mathbbm{o}}}
+\newcommand{\pbbm}{\ensuremath{\mathbbm{p}}}
+\newcommand{\qbbm}{\ensuremath{\mathbbm{q}}}
+\newcommand{\rbbm}{\ensuremath{\mathbbm{r}}}
+\newcommand{\sbbm}{\ensuremath{\mathbbm{s}}}
+\newcommand{\tbbm}{\ensuremath{\mathbbm{t}}}
+\newcommand{\ubbm}{\ensuremath{\mathbbm{u}}}
+\newcommand{\vbbm}{\ensuremath{\mathbbm{v}}}
+\newcommand{\wbbm}{\ensuremath{\mathbbm{w}}}
+\newcommand{\xbbm}{\ensuremath{\mathbbm{x}}}
+\newcommand{\ybbm}{\ensuremath{\mathbbm{y}}}
+\newcommand{\zbbm}{\ensuremath{\mathbbm{z}}}
+%%%numbers \mathbbm
+\newcommand{\zerobbm}{\ensuremath{\mathbbm{0}}}
+\newcommand{\onebbm}{\ensuremath{\mathbbm{1}}}
+\newcommand{\twobbm}{\ensuremath{\mathbbm{2}}}
+\newcommand{\fourbbm}{\ensuremath{\mathbbm{3}}}
+\newcommand{\fifebbm}{\ensuremath{\mathbbm{3}}}
+\newcommand{\sixbbm}{\ensuremath{\mathbbm{3}}}
+\newcommand{\sevenbbm}{\ensuremath{\mathbbm{3}}}
+\newcommand{\eightbbm}{\ensuremath{\mathbbm{3}}}
+\newcommand{\ninebbm}{\ensuremath{\mathbbm{3}}}
+
+
+%%%capital \mathbm
+\newcommand{\Abm}{\ensuremath{\bm{A}}}
+\newcommand{\Bbm}{\ensuremath{\bm{B}}}
+\newcommand{\Cbm}{\ensuremath{\bm{C}}}
+\newcommand{\Dbm}{\ensuremath{\bm{D}}}
+\newcommand{\Ebm}{\ensuremath{\bm{E}}}
+\newcommand{\Fbm}{\ensuremath{\bm{F}}}
+\newcommand{\Gbm}{\ensuremath{\bm{G}}}
+\newcommand{\Hbm}{\ensuremath{\bm{H}}}
+\newcommand{\Ibm}{\ensuremath{\bm{I}}}
+\newcommand{\Jbm}{\ensuremath{\bm{J}}}
+\newcommand{\Kbm}{\ensuremath{\bm{K}}}
+\newcommand{\Lbm}{\ensuremath{\bm{L}}}
+\newcommand{\Mbm}{\ensuremath{\bm{M}}}
+\newcommand{\Nbm}{\ensuremath{\bm{N}}}
+\newcommand{\Obm}{\ensuremath{\bm{O}}}
+\newcommand{\Pbm}{\ensuremath{\bm{P}}}
+\newcommand{\Qbm}{\ensuremath{\bm{Q}}}
+\newcommand{\Rbm}{\ensuremath{\bm{R}}}
+\newcommand{\Sbm}{\ensuremath{\bm{S}}}
+\newcommand{\Tbm}{\ensuremath{\bm{T}}}
+\newcommand{\Ubm}{\ensuremath{\bm{U}}}
+\newcommand{\Vbm}{\ensuremath{\bm{V}}}
+\newcommand{\Wbm}{\ensuremath{\bm{W}}}
+\newcommand{\Xbm}{\ensuremath{\bm{X}}}
+\newcommand{\Ybm}{\ensuremath{\bm{Y}}}
+\newcommand{\Zbm}{\ensuremath{\bm{Z}}}
+%%%small \mathbm
+\newcommand{\abm}{\ensuremath{\bm{a}}}
+\newcommand{\bbm}{\ensuremath{\bm{b}}}
+\newcommand{\cbm}{\ensuremath{\bm{c}}}
+\newcommand{\dbm}{\ensuremath{\bm{d}}}
+\newcommand{\ebm}{\ensuremath{\bm{e}}}
+\newcommand{\fbm}{\ensuremath{\bm{f}}}
+\newcommand{\gbm}{\ensuremath{\bm{g}}}
+\newcommand{\hbm}{\ensuremath{\bm{h}}}
+\newcommand{\ibm}{\ensuremath{\bm{i}}}
+\newcommand{\jbm}{\ensuremath{\bm{j}}}
+\newcommand{\kbm}{\ensuremath{\bm{k}}}
+\newcommand{\lbm}{\ensuremath{\bm{l}}}
+\newcommand{\mbm}{\ensuremath{\bm{m}}}
+\newcommand{\nbm}{\ensuremath{\bm{n}}}
+\newcommand{\obm}{\ensuremath{\bm{o}}}
+\newcommand{\pbm}{\ensuremath{\bm{p}}}
+\newcommand{\qbm}{\ensuremath{\bm{q}}}
+\newcommand{\rbm}{\ensuremath{\bm{r}}}
+\newcommand{\sbm}{\ensuremath{\bm{s}}}
+\newcommand{\tbm}{\ensuremath{\bm{t}}}
+\newcommand{\ubm}{\ensuremath{\bm{u}}}
+\newcommand{\vbm}{\ensuremath{\bm{v}}}
+\newcommand{\wbm}{\ensuremath{\bm{w}}}
+\newcommand{\xbm}{\ensuremath{\bm{x}}}
+\newcommand{\ybm}{\ensuremath{\bm{y}}}
+\newcommand{\zbm}{\ensuremath{\bm{z}}}
+
+
+%%%diverse mathematical symbols and commands
+\newcommand{\defas}{\mathrel{\mathop :}=} % ``defined as''-symbol
+\newcommand{\asdef}{=\mathrel{\mathop :}} % ``as defined''-symbol
+%\newcommand{\op}[1]{\hat{\mathrm{#1}}}
+\newcommand{\opsf}[1]{\hat{\mathsf{#1}}}
+
+%\newcommand{\bra}[1]{\langle #1 |}
+%\newcommand{\ket}[1]{| #1 \rangle}
+
+\renewcommand{\d}{\ensuremath{\mathrm{d}}}
+%\newcommand{\ee}{\ensuremath{\mathrm{e}}}
+
+\newcommand{\sumint}[1]{\underset{#1}{\sum\hs{-4.6mm}\int\hs{0.8mm}}}
+\newcommand{\juu}{{1\hspace{-0.54ex}\mathrm{l}\hspace{-0.30ex}\mathrm{l}}} % big matrix one (three lines)
+\newcommand{\hph}[1]{\hphantom{#1\;\,}}
+
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\const}{\mathrm{const}}
+
+%%%diverse mathematical functions / operators
+%\newcommand{\Tr}{\ensuremath{\mathrm{Tr}}}
+%\newcommand{\tr}{\ensuremath{\mathrm{tr}}}
+\newcommand{\sign}{\ensuremath{\mathrm{sign}}}
+\newcommand{\diag}{\ensuremath{\mathrm{diag}}}
+\newcommand{\Vol}{\ensuremath{\mathrm{Vol}}}
+\newcommand{\Ker}{\ensuremath{\mathrm{Ker}}}
+
+%%%diverse physical energy units
+\newcommand{\mueV}{\ensuremath{\mu\mathrm{eV}}}
+\newcommand{\meV}{\ensuremath{\mathrm{meV}}}
+\newcommand{\keV}{\ensuremath{\mathrm{keV}}}
+\newcommand{\MeV}{\ensuremath{\mathrm{MeV}}}
+\newcommand{\GeV}{\ensuremath{\mathrm{GeV}}}
+\newcommand{\TeV}{\ensuremath{\mathrm{TeV}}}
+\newcommand{\PeV}{\ensuremath{\mathrm{PeV}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%MISCELLANEOUS
+\newcommand{\ub}[3]{\underbrace{#1}_{\phantom{#3}\,#2\,#3}}
+\newcommand{\ob}[3]{\overbrace{#1}^{\phantom{#3}\,#2\,#3}}
+%\newcommand{\ol}{\overline}
+\renewcommand{\u}{\underline}
+\newcommand{\os}{\overset}
+\newcommand{\us}{\underset}
+
+\newcommand{\cds}{\,\cdot\,}
+
+\newcommand{\eg}{e.g.}
+\newcommand{\ie}{i.e.}
+\newcommand{\etal}{et al.}
+\newcommand{\hc}{{\rm H.c.}}
+\newcommand{\rhs}{r.h.s.}
+\newcommand{\lhs}{l.h.s.}
+\newcommand{\wrt}{w.r.t.}
+\newcommand{\cf}{cf.}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{eqnarray}}
+\newcommand{\ea}{\end{eqnarray}}
+%\renewcommand{\mid}{$\mspace{-3mu}$\mid$\mspace{-3mu}$}
+
+\setlength{\parskip}\smallskipamount
+\linespread{1.15}
+
+\setlength{\footnotesep}{4.5mm}
+
+\settimeformat{ampmtime}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\FK}[1]{\color{orange}{[#1]\;}\color{black}}
+\newcommand{\BC}[1]{\color{red}{#1\;}\color{black}}
+
+
+\newcommand{\Blue}[1]{\textcolor{DARKBLUE}{\sffamily #1}}
+\newcommand{\mathblue}[1]{\textcolor{DARKBLUE}{#1}}
+\newcommand{\Green}[1]{\textcolor{darkgreen}{#1}}
+\newcommand{\YT}[1]{\textcolor{darkgreen}{\sffamily [YT: #1]}}
+%\renewcommand{\AE}[1]{\textcolor{DARKGREEN}{\sffamily [AE: #1]}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\ga{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\la{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\betap{\tilde\beta}
+\def\del{\delta_{\rm PBH}^{\rm local}}
+\def\Msun{M_\odot}
+\def\LQCD{\Lambda_{\rm QCD}}
+\def\tQCD{t_{\rm QCD}}
+\def\fPBH{f_{\rm PBH}}
+\def\MPBH{M_{\rm PBH}}
+\def\Gsph{\Gamma_{\rm sph}}
+\def\Teff{T_{\rm eff}}
+\def\Tth{T_{\rm th}}
+\def\aW{\alpha_{\rm W}}
+\def\dCP{\delta_{\rm CP}}
+\def\nB{n_{\rm B}}
+\def\OR{\Omega_{\rm R}}
+\def\OM{\Omega_{\rm M}}
+\def\OB{\Omega_{\rm B}}
+\def\OPBH{\Omega_{\rm PBH}}
+\def\ODM{\Omega_{\rm DM}}
+\newcommand{\tcb}{\textcolor{blue}}
+\newcommand{\sv}{\langle\sigma v \rangle}
+
+\newcommand{\com}{\Ccal}
+
+\newcommand{\Mpl}{M_\mathrm{Pl}}
+\newcommand{\dS}{\mathrm{dS}}
+\newcommand{\ns}{n_\mathrm{s}}
+\newcommand{\cs}{c_\mathrm{s}}
+\newcommand{\CMB}{\mathrm{CMB}}
+\newcommand{\NL}{\mathrm{NL}}
+\newcommand{\IR}{\mathrm{IR}}
+\newcommand{\UV}{\mathrm{UV}}
+\newcommand{\FP}{\mathrm{FP}}
+\newcommand{\FPT}{\mathrm{FPT}}
+\newcommand{\bw}{\mathrm{bw}}
+\newcommand{\lin}{\mathrm{lin}}
+\newcommand{\uth}{\mathrm{th}}
+\newcommand{\eff}{\mathrm{eff}}
+\newcommand{\PBH}{\mathrm{PBH}}
+\newcommand{\GW}{\mathrm{GW}}
+\newcommand{\eq}{\mathrm{eq}}
+\newcommand{\umax}{\mathrm{max}}
+\newcommand{\umin}{\mathrm{min}}
+\newcommand{\DM}{\mathrm{DM}}
+\newcommand{\vir}{\mathrm{vir}}
+
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\erfc}{erfc}
+
+%remove subsubsections form TOC
+\makeatletter
+\def\l@subsubsection#1#2{}
+\makeatother
+
+\pagestyle{fancy}
+
+\textwidth=170mm
+\textheight=224mm
+\hoffset=0mm
+\footskip=18mm
+
+\headwidth=\textwidth
+
+\setlength{\headheight}{25pt}
+\renewcommand{\headrulewidth}{0.1mm}
+\setlength{\headsep}{8mm}
+
+%\newcommand{\chaptermark}[1]{ \markboth{#1}{} }
+%\renewcommand{\sectionmark}[1]{ \markright{#1} }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ******************************************************
+% ******************* END HEADER ***********************
+% ******************************************************
