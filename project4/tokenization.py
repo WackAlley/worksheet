@@ -36,6 +36,8 @@ ALiBi_tensor = biases.exp()
 
 # Nächster Schritt ist es den ALiBi Tensor im linearen Attention zu addieren.
 # Q_j * K_i -> Q_j * K_i + m(i-j), j>= i (causal), wobei m gleich slopes ist. Jedoch wird nicht der slope, sondern der bias dazuaddiert, was mir noch unklar ist
+# wir addieren zum K-Q inneren Produkt lineare biases, multipliziert mit einem Skalar das vom Head abhängt. Die lineares biases sind die negative relative Entfernung zwischen Key und Query Position.
+# https://reinforcedknowledge.com/position-information-in-transformer-based-models-exploring-the-main-methods-and-approaches/
 
 # zufällige Werte, die durch Lernen ersetzt werden
 K = torch.rand(nC, nHead)  # Key
