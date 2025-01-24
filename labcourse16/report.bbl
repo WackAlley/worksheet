@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{1}%
+\begin{thebibliography}{7}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -49,7 +49,25 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
-\bibitem [{\citenamefont {K.~Stelzer~(Original)}(2024)}]{manual1}%
+\bibitem [{\citenamefont {K.~Stelzer}(2024)}]{manual1}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~K.~Ã.}\ \bibnamefont {K.~Stelzer~(Original)}},\ }\href@noop {} {\emph {\bibinfo {title} {Versuch 16: $\gamma-\gamma$-Winkelkorrelationen und Koinzidenztechnkik}}} (\bibinfo {year} {2024})\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~K.}\ \bibnamefont {K.~Stelzer}},\ }\href@noop {} {\emph {\bibinfo {title} {Versuch 16: $\gamma-\gamma$-Winkelkorrelationen und Koinzidenztechnkik}}} (\bibinfo {year} {2024})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Basunia}(2015)}]{BASUNIA201569}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont {Basunia}},\ }\bibfield  {title} {\bibinfo {title} {Nuclear data sheets for a = 22},\ }\href {https://doi.org/https://doi.org/10.1016/j.nds.2015.07.002} {\bibfield  {journal} {\bibinfo  {journal} {Nuclear Data Sheets}\ }\textbf {\bibinfo {volume} {127}},\ \bibinfo {pages} {69} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Browne}\ and\ \citenamefont {Tuli}(2013)}]{BROWNE20131849}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Browne}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Tuli}},\ }\bibfield  {title} {\bibinfo {title} {Nuclear data sheets for a = 60},\ }\href {https://doi.org/https://doi.org/10.1016/j.nds.2013.11.002} {\bibfield  {journal} {\bibinfo  {journal} {Nuclear Data Sheets}\ }\textbf {\bibinfo {volume} {114}},\ \bibinfo {pages} {1849} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gilmore}(2008)}]{gilmore2008practical}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Gilmore}},\ }\href {https://books.google.de/books?id=phI1EAAAQBAJ} {\emph {\bibinfo {title} {Practical Gamma-ray Spectrometry}}}\ (\bibinfo  {publisher} {Wiley},\ \bibinfo {year} {2008})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stelzer}(1993)}]{manualold}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Stelzer}},\ }\href@noop {} {\emph {\bibinfo {title} {Grundlagen der Gamma-Spektroskopie}}} (\bibinfo {year} {1993})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Foreman-Mackey}\ \emph {et~al.}(2013)\citenamefont {Foreman-Mackey}, \citenamefont {Hogg}, \citenamefont {Lang},\ and\ \citenamefont {Goodman}}]{Foreman_Mackey_2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Foreman-Mackey}}, \bibinfo {author} {\bibfnamefont {D.~W.}\ \bibnamefont {Hogg}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Lang}},\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Goodman}},\ }\bibfield  {title} {\bibinfo {title} {\texttt{emcee}: The mcmc hammer},\ }\href {https://doi.org/10.1086/670067} {\bibfield  {journal} {\bibinfo  {journal} {Publications of the Astronomical Society of the Pacific}\ }\textbf {\bibinfo {volume} {125}},\ \bibinfo {pages} {306â€“312} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {n.d.}(nd)}]{ortec}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {n.d.}},\ }\href {https://www.ortec-online.com/-/media/ametekortec/third-edition-experiments/13-gamma-gamma-coincidence-angular-correlation.pdf?la=en$\&$revision=1c8e4e04-1e9c-4eb3-ae33-e00b663590bb$\&$hash=2069BDE473B32C936A147431543A8E90} {\bibinfo {title} {Ortec experiment 13}} (\bibinfo {year} {n.d.}),\ \bibinfo {note} {accessed: 2025-01-24}\BibitemShut {NoStop}%
 \end{thebibliography}%

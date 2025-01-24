@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.11.18)  23 JAN 2025 18:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.11.17)  24 JAN 2025 12:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -917,194 +917,173 @@ Class revtex4-2 Warning: Assuming \noaffiliation for authors.
 \openout6 = `report.toc'.
 
  [3]
-
-Package natbib Warning: Citation `manual1' on page 4 undefined on input line 75.
-
-<images/Decay Sodium.png, id=112, 1084.05pt x 602.25pt>
+<images/Decay Sodium.png, id=118, 1084.05pt x 602.25pt>
 File: images/Decay Sodium.png Graphic file (type png)
 <use images/Decay Sodium.png>
 Package pdftex.def Info: images/Decay Sodium.png  used on input line 78.
 (pdftex.def)             Requested size: 433.61232pt x 240.89572pt.
-<images/Decay Cobalt.png, id=116, 1278.7775pt x 602.25pt>
+<images/Decay Cobalt.png, id=124, 1278.7775pt x 602.25pt>
 File: images/Decay Cobalt.png Graphic file (type png)
 <use images/Decay Cobalt.png>
 Package pdftex.def Info: images/Decay Cobalt.png  used on input line 85.
 (pdftex.def)             Requested size: 483.69684pt x 227.80057pt.
-[4] [5 <./images/Decay Sodium.png> <./images/Decay Cobalt.png>]
+ [4]
 LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 93.
  (/usr/share/texlive/texmf-dist/tex/latex/tex-gyre/ts1qpl.fd
 File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
-)
-<plots/Winkelkorrelationen.pdf, id=141, 462.52798pt x 346.89601pt>
+) [5 <./images/Decay Sodium.png> <./images/Decay Cobalt.png>]
+<plots/Winkelkorrelationen.pdf, id=158, 462.52798pt x 346.89601pt>
 File: plots/Winkelkorrelationen.pdf Graphic file (type pdf)
 <use plots/Winkelkorrelationen.pdf>
-Package pdftex.def Info: plots/Winkelkorrelationen.pdf  used on input line 133.
+Package pdftex.def Info: plots/Winkelkorrelationen.pdf  used on input line 132.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
  [6{/usr/share/texlive/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [7 <./plots/Winkelkorrelationen.pdf>] [8] [9]
-<images/setting.jpg, id=201, 3276.24pt x 1473.505pt>
+<images/setting.jpg, id=223, 3276.24pt x 1473.505pt>
 File: images/setting.jpg Graphic file (type jpg)
 <use images/setting.jpg>
-Package pdftex.def Info: images/setting.jpg  used on input line 209.
+Package pdftex.def Info: images/setting.jpg  used on input line 207.
 (pdftex.def)             Requested size: 458.67049pt x 206.28929pt.
  [10] [11 <./images/setting.jpg>]
-<plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf, id=220, 462.52798pt x 346.89601pt>
+<plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf, id=245, 462.52798pt x 346.89601pt>
 File: plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf Graphic file (type pdf)
 <use plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf>
-Package pdftex.def Info: plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf  used on input line 242.
+Package pdftex.def Info: plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf  used on input line 240.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
  [12]
-<plots/MCMC Natrium Detektor 1 Chains.pdf, id=230, 462.52798pt x 346.89601pt>
+<plots/MCMC Natrium Detektor 1 Chains.pdf, id=257, 462.52798pt x 346.89601pt>
 File: plots/MCMC Natrium Detektor 1 Chains.pdf Graphic file (type pdf)
 <use plots/MCMC Natrium Detektor 1 Chains.pdf>
-Package pdftex.def Info: plots/MCMC Natrium Detektor 1 Chains.pdf  used on input line 257.
+Package pdftex.def Info: plots/MCMC Natrium Detektor 1 Chains.pdf  used on input line 255.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
  [13 <./plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf>]
-<plots/MCMC Natrium Detektor 1 Fit.pdf, id=249, 462.52798pt x 346.89601pt>
+<plots/MCMC Natrium Detektor 1 Fit.pdf, id=276, 462.52798pt x 346.89601pt>
 File: plots/MCMC Natrium Detektor 1 Fit.pdf Graphic file (type pdf)
 <use plots/MCMC Natrium Detektor 1 Fit.pdf>
-Package pdftex.def Info: plots/MCMC Natrium Detektor 1 Fit.pdf  used on input line 263.
+Package pdftex.def Info: plots/MCMC Natrium Detektor 1 Fit.pdf  used on input line 261.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
- [14 <./plots/MCMC Natrium Detektor 1 Chains.pdf>]
-Overfull \hbox (9.20932pt too wide) in paragraph at lines 282--283
-[]\OT1/qpl/m/n/10.95 Die Kali-bra-tionspa-ram-e-ter $\OML/cmm/m/it/10.95 a$ \OT1/qpl/m/n/10.95 und $\OML/cmm/m/it/10.95 b$ \OT1/qpl/m/n/10.95 haben eine Un-sicher-heit, die durch die gau^^Ysche Fehler-fortpflanzung
- []
-
-[15 <./plots/MCMC Natrium Detektor 1 Fit.pdf>]
-<plots/Eichgeraden.pdf, id=298, 462.52798pt x 346.89601pt>
+ [14 <./plots/MCMC Natrium Detektor 1 Chains.pdf>] [15 <./plots/MCMC Natrium Detektor 1 Fit.pdf>] [16]
+<plots/Eichgeraden.pdf, id=344, 462.52798pt x 346.89601pt>
 File: plots/Eichgeraden.pdf Graphic file (type pdf)
 <use plots/Eichgeraden.pdf>
-Package pdftex.def Info: plots/Eichgeraden.pdf  used on input line 357.
+Package pdftex.def Info: plots/Eichgeraden.pdf  used on input line 353.
 (pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
- [16]
-<plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf, id=318, 462.52798pt x 346.89601pt>
+<plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf, id=349, 462.52798pt x 346.89601pt>
 File: plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf Graphic file (type pdf)
 <use plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf>
-Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf  used on input line 368.
+Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf  used on input line 360.
 (pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
  [17 <./plots/Eichgeraden.pdf>]
-<plots/Vergleich gaußscher Fits bei 0ns Delay.pdf, id=346, 578.16pt x 361.35pt>
+<plots/Vergleich gaußscher Fits bei 0ns Delay.pdf, id=375, 578.16pt x 361.35pt>
 File: plots/Vergleich gaußscher Fits bei 0ns Delay.pdf Graphic file (type pdf)
 <use plots/Vergleich gaußscher Fits bei 0ns Delay.pdf>
-Package pdftex.def Info: plots/Vergleich gaußscher Fits bei 0ns Delay.pdf  used on input line 376.
+Package pdftex.def Info: plots/Vergleich gaußscher Fits bei 0ns Delay.pdf  used on input line 368.
 (pdftex.def)             Requested size: 462.52863pt x 289.0804pt.
-<plots/Vergleich gaußscher Fits bei 96ns Delay.pdf, id=347, 578.16pt x 361.35pt>
+<plots/Vergleich gaußscher Fits bei 96ns Delay.pdf, id=376, 578.16pt x 361.35pt>
 File: plots/Vergleich gaußscher Fits bei 96ns Delay.pdf Graphic file (type pdf)
 <use plots/Vergleich gaußscher Fits bei 96ns Delay.pdf>
-Package pdftex.def Info: plots/Vergleich gaußscher Fits bei 96ns Delay.pdf  used on input line 382.
+Package pdftex.def Info: plots/Vergleich gaußscher Fits bei 96ns Delay.pdf  used on input line 374.
 (pdftex.def)             Requested size: 462.52863pt x 289.0804pt.
  [18 <./plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf>] [19 <./plots/Vergleich gaußscher Fits bei 0ns Delay.pdf>]
-<plots/Eichgerade Zeit.pdf, id=377, 462.52798pt x 346.89601pt>
+<plots/Eichgerade Zeit.pdf, id=406, 462.52798pt x 346.89601pt>
 File: plots/Eichgerade Zeit.pdf Graphic file (type pdf)
 <use plots/Eichgerade Zeit.pdf>
-Package pdftex.def Info: plots/Eichgerade Zeit.pdf  used on input line 402.
+Package pdftex.def Info: plots/Eichgerade Zeit.pdf  used on input line 394.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
  [20 <./plots/Vergleich gaußscher Fits bei 96ns Delay.pdf>] [21 <./plots/Eichgerade Zeit.pdf>]
-<plots/Koinzidenzplot Vernichtungsstrahlung.pdf, id=417, 462.52798pt x 346.89601pt>
+<plots/Koinzidenzplot Vernichtungsstrahlung.pdf, id=446, 462.52798pt x 346.89601pt>
 File: plots/Koinzidenzplot Vernichtungsstrahlung.pdf Graphic file (type pdf)
 <use plots/Koinzidenzplot Vernichtungsstrahlung.pdf>
-Package pdftex.def Info: plots/Koinzidenzplot Vernichtungsstrahlung.pdf  used on input line 453.
+Package pdftex.def Info: plots/Koinzidenzplot Vernichtungsstrahlung.pdf  used on input line 445.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
- [22 <./plots/Koinzidenzplot Vernichtungsstrahlung.pdf>]
-<plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf, id=445, 462.52798pt x 346.89601pt>
+ [22]
+<plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf, id=456, 462.52798pt x 346.89601pt>
 File: plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf Graphic file (type pdf)
 <use plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf>
-Package pdftex.def Info: plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf  used on input line 464.
+Package pdftex.def Info: plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf  used on input line 457.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
-<plots/Winkelkorrelationen Vergleich.pdf, id=446, 462.52798pt x 346.89601pt>
+ [23 <./plots/Koinzidenzplot Vernichtungsstrahlung.pdf>] [24 <./plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf>]
+<plots/Winkelkorrelationen Vergleich.pdf, id=507, 462.52798pt x 346.89601pt>
 File: plots/Winkelkorrelationen Vergleich.pdf Graphic file (type pdf)
 <use plots/Winkelkorrelationen Vergleich.pdf>
-Package pdftex.def Info: plots/Winkelkorrelationen Vergleich.pdf  used on input line 474.
+Package pdftex.def Info: plots/Winkelkorrelationen Vergleich.pdf  used on input line 496.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
- [23 <./plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf>] (./report.bbl
 
-LaTeX Warning: Reference `LastBibItem' on page 24 undefined on input line 9.
+Underfull \hbox (badness 10000) in paragraph at lines 510--516
 
+ []
 
-Package natbib Warning: Empty `thebibliography' environment on input line 52.
+[25 <./plots/Winkelkorrelationen Vergleich.pdf>] [26]
+Overfull \hbox (1.63823pt too wide) in paragraph at lines 517--520
+\OT1/qpl/m/n/10.95 riebest[]atigung zu akzep-tieren. Es liegt die Ver-mu-tung nahe, dass noch ein Schritt in der Durchf[]uhrung
+ []
 
-)
+(./report.bbl)
 File: plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf Graphic file (type pdf)
 <use plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf>
-Package pdftex.def Info: plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf  used on input line 516.
+Package pdftex.def Info: plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf  used on input line 548.
 (pdftex.def)             Requested size: 386.95894pt x 290.23145pt.
-<plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf, id=466, 462.52798pt x 346.89601pt>
+<plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf, id=543, 462.52798pt x 346.89601pt>
 File: plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf Graphic file (type pdf)
 <use plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf>
-Package pdftex.def Info: plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf  used on input line 521.
+Package pdftex.def Info: plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf  used on input line 553.
 (pdftex.def)             Requested size: 386.95894pt x 290.23145pt.
-<plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf, id=467, 462.52798pt x 346.89601pt>
+<plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf, id=544, 462.52798pt x 346.89601pt>
 File: plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf Graphic file (type pdf)
 <use plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf>
-Package pdftex.def Info: plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf  used on input line 529.
+Package pdftex.def Info: plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf  used on input line 561.
 (pdftex.def)             Requested size: 386.95894pt x 290.23145pt.
-<plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf, id=468, 462.52798pt x 346.89601pt>
+<plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf, id=545, 462.52798pt x 346.89601pt>
 File: plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf Graphic file (type pdf)
 <use plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf>
-Package pdftex.def Info: plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf  used on input line 534.
+Package pdftex.def Info: plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf  used on input line 566.
 (pdftex.def)             Requested size: 386.95894pt x 290.23145pt.
-<plots/MCMC Natrium Detektor 1 Hyperparameters.pdf, id=469, 1459.85402pt x 1459.85402pt>
+<plots/MCMC Natrium Detektor 1 Hyperparameters.pdf, id=546, 1459.85402pt x 1459.85402pt>
 File: plots/MCMC Natrium Detektor 1 Hyperparameters.pdf Graphic file (type pdf)
 <use plots/MCMC Natrium Detektor 1 Hyperparameters.pdf>
-Package pdftex.def Info: plots/MCMC Natrium Detektor 1 Hyperparameters.pdf  used on input line 540.
+Package pdftex.def Info: plots/MCMC Natrium Detektor 1 Hyperparameters.pdf  used on input line 572.
 (pdftex.def)             Requested size: 437.95958pt x 437.95958pt.
-<plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf, id=470, 462.52798pt x 346.89601pt>
+<plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf, id=547, 462.52798pt x 346.89601pt>
 File: plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf Graphic file (type pdf)
 <use plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf>
-Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf  used on input line 545.
+Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf  used on input line 578.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
-<plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf, id=471, 462.52798pt x 346.89601pt>
+<plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf, id=548, 462.52798pt x 346.89601pt>
 File: plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf Graphic file (type pdf)
 <use plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf>
-Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf  used on input line 550.
+Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf  used on input line 583.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
-<plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf, id=472, 462.52798pt x 346.89601pt>
+<plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf, id=549, 462.52798pt x 346.89601pt>
 File: plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf Graphic file (type pdf)
 <use plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf>
-Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf  used on input line 554.
+Package pdftex.def Info: plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf  used on input line 587.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
+ [27]
 
+LaTeX Warning: A float is stuck (cannot be placed) on input line 592.
 
-Package natbib Warning: There were undefined citations.
+[28 <./plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf>]
 
-[24 <./plots/Winkelkorrelationen Vergleich.pdf>]
+LaTeX Warning: A float is stuck (cannot be placed) on input line 592.
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 559.
-
-[25 <./plots/Energiegesamtspektrum von Natrium aus Detektor 2.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 559.
-
-[26 <./plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf> <./plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf>] [27 <./plots/MCMC Natrium Detektor 1 Hyperparameters.pdf>] [28 <./plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf> <./plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf>] [29 <./plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf>] 
+[29 <./plots/Energiegesamtspektrum von Cobalt aus Detektor 1.pdf> <./plots/Energiegesamtspektrum von Cobalt aus Detektor 2.pdf>] [30 <./plots/MCMC Natrium Detektor 1 Hyperparameters.pdf>] [31 <./plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1.pdf> <./plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf>] [32 <./plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 2.pdf>] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 12E234F84E11477E4A3CCC72E2742A83;2748
-(rerunfilecheck)             After:  A8B714AE7C3B12B95D43841A4F99AA7A;2837.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: A8B714AE7C3B12B95D43841A4F99AA7A;2837.
  ) 
 Here is how much of TeX's memory you used:
- 32581 strings out of 476041
- 630166 string characters out of 5793173
- 1880388 words of memory out of 6000000
- 52357 multiletter control sequences out of 15000+600000
- 565711 words of font info for 117 fonts, out of 8000000 for 9000
+ 32634 strings out of 476041
+ 631034 string characters out of 5793173
+ 1882388 words of memory out of 6000000
+ 52395 multiletter control sequences out of 15000+600000
+ 568593 words of font info for 118 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 88i,22n,92p,1558b,1181s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,24n,92p,1558b,1181s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on report.pdf (29 pages, 2469975 bytes).
+Output written on report.pdf (32 pages, 2522361 bytes).
 PDF statistics:
- 822 PDF objects out of 1000 (max. 8388607)
- 642 compressed objects within 7 object streams
- 109 named destinations out of 1000 (max. 500000)
- 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 889 PDF objects out of 1000 (max. 8388607)
+ 701 compressed objects within 8 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

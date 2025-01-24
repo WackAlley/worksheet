@@ -1469,13 +1469,13 @@ INPUT ./plots/MCMC Natrium Detektor 1 Fit.pdf
 INPUT plots/MCMC Natrium Detektor 1 Fit.pdf
 INPUT ./plots/MCMC Natrium Detektor 1 Fit.pdf
 INPUT ./plots/MCMC Natrium Detektor 1 Fit.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplr.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplr.tfm
 INPUT ./plots/Eichgeraden.pdf
 INPUT ./plots/Eichgeraden.pdf
 INPUT plots/Eichgeraden.pdf
 INPUT ./plots/Eichgeraden.pdf
 INPUT ./plots/Eichgeraden.pdf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplr.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplr.tfm
 INPUT ./plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf
 INPUT ./plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf
 INPUT plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1.pdf
@@ -1515,6 +1515,7 @@ INPUT ./report.bbl
 INPUT report.bbl
 INPUT ./report.bbl
 INPUT report.bbl
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplri.tfm
 INPUT ./plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf
 INPUT ./plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf
 INPUT plots/Energiegesamtspektrum von Natrium aus Detektor 1.pdf
