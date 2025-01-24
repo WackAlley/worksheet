@@ -40,7 +40,8 @@ Ziel der Koinzidenzspektroskopie ist es, die Kernzerfälle sowie die Winkelkorre
 	Teilnehmer 1: Laura Gans-Bartl \\[5mm]
 	Teilnehmer 2: Woo-Seok Yim \\[5mm]
 	Durchgeführt am: 9. Dezember 2024 \\[5mm]
-	Abgabedatum: 30. Dezember 2024 }
+	Abgabedatum: 30. Dezember 2024 \\
+		\hspace{100pt} 24. Januar 2025}
 \end{center}
 \newpage
 \maketitle
@@ -177,8 +178,7 @@ Für Verteilungen von positiven Zahlen kann statt der Normalverteilung die logno
 	\label{eq:lognormal}
 	P_{logn}(x) &= \frac{1}{x \cdot \sigma \sqrt{2\pi}} \exp \left[ -\frac{1}{2} \left ( \frac{\ln x - \mu}{\sigma} \right )^2  \right].
 \end{align}
-
-\vspace{15pt}
+\newpage
 \noindent \textbf{Zählrate, Quellstärke}\\
 Die Zählrate eines Detektors setzt sich aus der Quellstärke/Zerfallsrate $Q$, dem Raumwinkel $w$ und der Ansprechempfindlichkeit $\epsilon$ des Detektors zusammen:
 \begin{align}
@@ -446,7 +446,7 @@ Eine grafische Darstellung ist in \ref{fig:coincidenceannihilation} zu sehen. F�
 	\caption{grafische Darstellung der $\gamma - \gamma -$Koinzidenz für die Vernichtungsstrahlung}
 	\label{fig:coincidenceannihilation}
 \end{figure}
-
+Wir erkennen, dass - anders als von der Theorie erwartet - die maximale Signalstärke nicht bei 180°-Auslenkung der beiden Detektoren liegt, sondern etwas verschoben. Aus der Theorie erwarten wir, dass das Positron bei der Annihilation thermische/nichtrelativistische Geschwindigkeiten besitzt, und daher die Impulserhaltung mit null Anfangsimpuls gilt. In der Realität könnte diese Geschwindigkeit zur Ablenkung in unserer Messung ausgemacht haben. \vspace{10pt}\\
 \textbf{$e^+e^- $ Annihilation und $\gamma$-Zerfall (511keV - 1275keV)}\\
 Es wird erwartet, dass die gemessenen Zählraten kleiner werden als beim vorherigen Versuch. Dies konnte in unserem Fall nicht bestätigt werden. Eine grafische Darstellung ist in Abbildung \ref{fig:coincidenceannihilgamma} zu sehen. Wir erwarten aus der Theorie keine Koinzidenz zwischen den Gammaquanten der Vernichtung und des Gammazerfalls, da die zwei Prozesse unabhängig voneinander ablaufen. Wir erwarten also keine Zeitgleichheit aus einem kausalen Zusammenhang. Aufgrund unserer endlichen Auflösung ist jedoch zu erwarten, dass das Zeitfenster zwischen erstem und zweiten Gammaquant sehr kurz ist, und zu zufälligen Koinzidenzen führen kann. \\
 Würde eine Koinzidenz existieren, müssen wir in der Abblidung eine Winkelabhängigkeit gemäß der Winkelkorrelationsfunktion erkennen. \\
@@ -508,15 +508,16 @@ Abgesehen von den Fehlern sehen wir, dass die Daten der theoretischen Kurve nur 
 \section{Diskussion}
 \label{sec:Diskussion}
 \textbf{Zu den kalibrierten Energiespektren}\\
-Mit der Natriumeichung erreichen die Maxima der Cobaltspektren die theoretischen Werte von 1173.2$keV$ und 1332.5$keV$. Aus dem Vergleich der Natriumeichung mit der Cobalteichung sehen wir, dass sich die Kalibrationen, abgesheen von der leichten Diskrepanz bei Detektor 2, gut überlappen. Wir bestätigen somit die Qualität der Kalibration, die in Eichlabors wie die Physikalisch-Technische Bundesanstalt Braunschweig angewendet wird \cite{manual1}.\\
+Mit der Natriumeichung erreichen die Maxima der Cobaltspektren die theoretischen Werte von 1173.2$keV$ und 1332.5$keV$. Aus dem Vergleich der Natriumeichung mit der Cobalteichung sehen wir, dass sich die Kalibrationen, abgesheen von der leichten Diskrepanz bei Detektor 2, gut überlappen. Wir bestätigen somit die Qualität der Kalibration, die in Eichlabors wie die Physikalisch-Technische Bundesanstalt Braunschweig angewendet wird \cite{manual1}.\vspace{10pt}\\
+\textbf{Technische Einzelheiten, Datenanalyse}\\
 Eine Kategorie des Fehlers wurde in unserer Durchführung vernachlässigt, und zwar sind es die Fehler vom numerischen Fit mittels MCMC, die im Cornerplot \ref{fig:cornerplot} zu erkennen sind. Wir haben uns dazu entschieden, diese Fehler zunächst auszulassen, da der numerische Fit bereits bei jeder Programmausführung schwankt und der Fehler wenig aussagekräftig ist. Es muss also zunächst sichergestellt werden, dass der numerische Fit reproduzierbare Werte liefert, was durch ein Erhöhen der Iteration (im Moment 500) erreicht werden kann, jedoch würde dies die Ausführungszeit deutlich erhöhen; ein MCMC-Durchlauf dauert bei einem Prozessor mit 6 Kernen mit jeweils 2 Threads etwa eine Minute, bei 2 Kernen mit jeweils 2 Threads bereits fünf Minuten. Eine Lösung dazu wäre es, den Vorgang zu parallelisieren (\texttt{number of parallel jobs = }Anzahl an Kernen). Eine weitere Möglichkeit besteht darin, den Wertebereich von gut bekannten Parametern so klein wie möglich zu halten, was bedeutet, dass Parameterwerte über dem gegebenen Toleranzbeich hinaus gar nicht erst von den MCMC-Ketten akzeptiert werden. Im Programm wird dies durch die \texttt{lnprior}-Funktion ermöglicht. Dazu ist aber entweder ein gutes Vorwissen über die Parameterwerte oder viel Herumprobieren mit dem numerischen Fit erforerlich.\\
-Ziel des numerischen Fits ist die Bestimmung der Maxima und dessen gaußischer Standardabweichung gewesen. Wir haben uns darauf beschränkt, den Highest-Likelihood Fit visuell zu kontrollieren, ob er mit den Datenpunkten übereinstimmt. Auch dies ist vor allem bei Daten mit mehreren Hintergründen nicht gewährleistet; Für die beiden Natriumspektren hat die Modellierung mit drei Funktionen (lognormaler Hintergrund, gaußscher Peak 511$keV$, gaußscher Peak 1275$keV$) gut funktioniert. Für Cobalt jedoch sehen wir, dass drei Modellfunktionen nicht ausreichen. Wir vermuten, dass es mehrere Mechanismen für den Hintergrund gegeben hat: Neben der Compton-Rückstreuung können beispielsweise Photonen im Röntgenbereich aus der photoelektrischen Absorption von einem Detektor zum anderen gestreut worden sein. Weitere, jedoch unwahrscheinliche Möglichkeiten sind Aktivitäten von anderen zerfallenden Quellen. \vspace{10pt}\\
+Ziel des numerischen Fits ist die Bestimmung der Maxima und dessen gaußischer Standardabweichung gewesen. Wir haben uns darauf beschränkt, den Highest-Likelihood Fit visuell zu kontrollieren, ob er mit den Datenpunkten übereinstimmt. Auch dies ist vor allem bei Daten mit mehreren Hintergründen nicht gewährleistet; Für die beiden Natriumspektren hat die Modellierung mit drei Funktionen (lognormaler Hintergrund, gaußscher Peak 511$keV$, gaußscher Peak 1275$keV$) gut funktioniert. Für Cobalt jedoch sehen wir (vor allem bei Detekor 1, siehe Abbildung \ref{fig:mcmcfitco1}), dass drei Modellfunktionen nicht ausreichen. Wir vermuten, dass es mehrere Mechanismen für den Hintergrund gegeben hat: Neben der Compton-Rückstreuung können beispielsweise Photonen im Röntgenbereich aus der photoelektrischen Absorption von einem Detektor zum anderen gestreut worden sein. Weitere, jedoch unwahrscheinliche Möglichkeiten sind Aktivitäten von anderen zerfallenden Quellen.\\
+Eine weitere, bisher ununtersuchte jedoch vielversprechende Methode des numerischen Fits für multimodlae Verteilungen ist die \textit{KDE,} die kernel density estimate.\vspace{10pt}\\
 \textbf{Zur Zeitauflösung}\\
 Gemäß Gilmore et.\textit{al} gilt für dem FWHM von Germaniumdetektoren der Wertebereich 3-10ns (\cite{gilmore2008practical} S. 52), eine deutlich bessere Zeitauflösung. Entsprechend dieser Literatur wäre ein Abgleich mit Herstellerangaben nützlich, um den von uns berecheten Wert bezüglich der Durchführungsqualität und der Detektroqualität zu interpretieren. Eine Angabe zu unserem Equipment ist in \cite{ortec} zu finden, jedoch haben wir bisher keine Angaben zur Zeitauflösung gefunden.\vspace{10pt}\\
-\newpage
 \textbf{Zur Koinzidenzmessung}\\
 Es besteht die Möglichkeit, die Quellstärke $Q$ von Cobalt-60 nachzukontrollieren, wenn die Masse der im Versuch verwendeten Probe bekannt ist.\\
-Wie in der Durchführung besprochen, sind die Daten der Winkelkorrelation schlecht als Theoriebestätigung zu akzeptieren. Es liegt die Vermutung nahe, dass noch ein Schritt in der Durchführung fehlt, und zwar von den Zählraten den Hintergrundanteil aus den lognormalen Fits abzuziehen; dies würde die Datenkurve runtersetzen und möglicherweise die Theorie bestätigen. Die Gültigkeit dieses Ansatzes muss jedoch zunächst bestätigt werden. Der Ansatz wäre dann, die lognormale Funktion bei den kalibrierten Maxima auszuwerten, und den Wert als Hintergrundprozess von den Zählraten der jeweiligen Detektoren abzuziehen. 
+Wie in der Durchführung besprochen, sind die Daten der Winkelkorrelation schlecht als Theoriebestätigung zu akzeptieren. Es liegt die Vermutung nahe, dass noch ein Schritt in der Durchführung fehlt, und zwar von den Zählraten den Hintergrundanteil aus den lognormalen Fits abzuziehen; dies würde die Zerfallsrate erniedrigen und möglicherweise die Theorie besser bestätigen. Die Gültigkeit dieses Ansatzes muss jedoch zunächst bestätigt werden, denn bisher sind noch keine theoretischen Modelle für die Hintergrundmechanismen gut bekannt außer der Comptonstreuung. Zu den Mechanismen zählen die Photononen aus der photolelektrischen Absorption und Hintergrundaktivitäten von unbekannten, unerwünschten Quellen. Gelingt es uns, gute theoretische Modelle für die Hintergrundmechanismen zu finden, wäre dann Ansatz, die lognormale Funktion bei den kalibrierten Maxima auszuwerten, und den Wert als Hintergrundprozess von den Zählraten der jeweiligen Detektoren abzuziehen. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -526,8 +527,10 @@ Wie in der Durchführung besprochen, sind die Daten der Winkelkorrelation schlec
 
 \section{Fazit}
 \label{sec:Fazit}
-Mit diesem Versuch bestätigen wir die Genauigkeit der Natriumeichung. 
+Mit diesem Versuch bestätigen wir die Genauigkeit der Natriumeichung. Für das Modellieren multimodaler Verteilungen untersuchen wir die Markov-Chain-Monte-Carlo Methode für das numerische Fit an Daten und finden, dass bei guter Modellierung präzise Fits für den Gesamtspektrum der Daten erstellt werden können. \\
+Wir lernen, dass es wichtig ist, die Zeitauflösung gut zu verstehen, da die Qualität der Koinzidenzmessung von dieser Größe zu hohem Maß abhängt. Für genauere Auswertungen schlagen wir vor, dass über die Modellierung der Hintergrundaktivität nachgedacht werden soll. 
 
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -574,11 +577,32 @@ Mit diesem Versuch bestätigen wir die Genauigkeit der Natriumeichung.
 	\label{fig:cornerplot}
 \end{figure}
 
+\begin{figure}
+	\includegraphics[scale=.8]{"plots/MCMC Natrium Detektor 2 Fit".pdf}
+	\caption{Highest Likelihood Fit Natrium, Detektor 2}
+	\label{fig:mcmcfitna2}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[scale=.8]{"plots/MCMC Cobalt Detektor 1 Fit".pdf}
+	\caption{Highest Likelihood Fit Cobalt, Detektor 1}
+	\label{fig:mcmcfitco1}
+\end{figure}
+
+\begin{figure}
+		\includegraphics[scale=.8]{"plots/MCMC Cobalt Detektor 2 Fit".pdf}
+	\caption{Highest Likelihood Fit Cobalt, Detektor 2}
+	\label{fig:mcmcfitco2}
+\end{figure}
+
 \begin{figure}		
 	\includegraphics[scale=.8]{"plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 1".pdf}
 	\caption{kalibriertes Spektrum Natrium, Detektor 1.}
 	\label{fig:calibratedsodium1}
 \end{figure}
+
+
+
 \begin{figure}		
 	\includegraphics[scale=.8]{"plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2".pdf}
 	\caption{kalibriertes Spektrum Natrium, Detektor 2.}

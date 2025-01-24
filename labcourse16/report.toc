@@ -8,12 +8,12 @@
 \contentsline {subsection}{\numberline {B}Winkelkorrelation}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {C}Interaktionen und Detektion des Gammaquants}{7}{subsection.2.3}%
 \contentsline {subsection}{\numberline {D}Koinzidenzspektroskopie}{8}{subsection.2.4}%
-\contentsline {section}{\numberline {III}Signalverarbeitung}{10}{section.3}%
+\contentsline {section}{\numberline {III}Signalverarbeitung}{11}{section.3}%
 \contentsline {section}{\numberline {IV}Durchführung}{12}{section.4}%
 \contentsline {subsection}{\numberline {A}Energiegesamtspektra; Kalibration Kanallage-Energie}{12}{subsection.4.1}%
 \contentsline {subsection}{\numberline {B}Time-delay Spektra, Kalibration Kanallage-Zeit}{18}{subsection.4.2}%
 \contentsline {subsection}{\numberline {C}Koinzidenzmessungen}{22}{subsection.4.3}%
 \contentsline {section}{\numberline {V}Diskussion}{26}{section.5}%
 \contentsline {section}{\numberline {VI}Fazit}{27}{section.6}%
-\contentsline {section}{\numberline {VII}Quellen}{27}{section.7}%
-\contentsline {section}{\numberline {VIII}Anhang}{27}{section.8}%
+\contentsline {section}{\numberline {VII}Quellen}{28}{section.7}%
+\contentsline {section}{\numberline {VIII}Anhang}{28}{section.8}%

@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex report"] 1737717604.95987 "report.aux" "report.bbl" "report" 1737717787.61486 0
+["bibtex report"] 1737748230.44983 "report.aux" "report.bbl" "report" 1737748691.2192 0
   "./report.bib" 1737716140.19219 2458 2db4460d93421a8365a5d9ac91b0ca09 ""
-  "./reportNotes.bib" 1737717787.36539 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+  "./reportNotes.bib" 1737748690.96231 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1601932770 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "report.aux" 1737717787.36439 13854 4d798021821ffe82a563f4963ecf1f15 "pdflatex"
+  "report.aux" 1737748690.96131 14729 04b82332ae08bcdd5ef65d45203262aa "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1737717786.65831 "report.tex" "report.pdf" "report" 1737717787.61503 0
+["pdflatex"] 1737748690.22901 "report.tex" "report.pdf" "report" 1737748691.21939 0
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc" 1529098226 2409 c64dab22331c83731e970f6020b4448b ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1529098226 3124 3813fd4c981d99822890a2861b0d274c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -262,18 +262,21 @@
   "plots/Kalibriertes Energiegesamtspektrum von Natrium aus Detektor 2.pdf" 1737688421.43822 70850 be06f9190d3ca06f43aac716930a3270 ""
   "plots/Koinzidenzplot Vernichtungsstrahlung Gammazerfall.pdf" 1737706455.83403 133196 92c8ed3942924352431c63e936af3356 ""
   "plots/Koinzidenzplot Vernichtungsstrahlung.pdf" 1737705625.21366 163836 31c25acfdce9dfc0a11036df258acebf ""
+  "plots/MCMC Cobalt Detektor 1 Fit.pdf" 1737686602.01581 229922 22cd277479082a2baa516590f154a739 ""
+  "plots/MCMC Cobalt Detektor 2 Fit.pdf" 1737686682.60696 182911 9738113f28ca4810268e5bc0498a931c ""
   "plots/MCMC Natrium Detektor 1 Chains.pdf" 1737686429.41848 251192 968f61f81f1dcf10ad591fc7fe8473d1 ""
   "plots/MCMC Natrium Detektor 1 Fit.pdf" 1737686437.42149 227000 465dd18ce0b0c0f6f46e90430b70a580 ""
   "plots/MCMC Natrium Detektor 1 Hyperparameters.pdf" 1737686434.09149 908133 15e755623bfc7e27b297ecc34cb68f84 ""
+  "plots/MCMC Natrium Detektor 2 Fit.pdf" 1737686516.67164 221620 ed8bed6eb251e4be6b4bdd02e9e0b489 ""
   "plots/Vergleich gaußscher Fits bei 0ns Delay.pdf" 1737448907.53376 71085 245f822529327840ae58ab8161815f6c ""
   "plots/Vergleich gaußscher Fits bei 96ns Delay.pdf" 1737448907.80576 71062 320b2490d7384406a55ec7c0ea5fa7dd ""
   "plots/Winkelkorrelationen Vergleich.pdf" 1737711157.47835 103406 41f304c5a7876034661b75b2b3ac3c84 ""
   "plots/Winkelkorrelationen.pdf" 1737686514.51364 145207 d6bbd61d014f334159e5b1d9df04fec7 ""
-  "report.aux" 1737717787.36439 13854 4d798021821ffe82a563f4963ecf1f15 "pdflatex"
-  "report.bbl" 1737717605.01304 5311 553b9f489f10960278c1dfe26da4432b "bibtex report"
-  "report.out" 1737717787.36539 2837 a8b714ae7c3b12b95d43841a4f99aa7a "pdflatex"
-  "report.tex" 1737717784.73738 43694 5767cee321f224e4b7d1cd3f8ce272bf ""
-  "report.toc" 1737717787.36539 1446 e551a0c1deb1c7984f9f72dcb4281fd4 "pdflatex"
+  "report.aux" 1737748690.96131 14729 04b82332ae08bcdd5ef65d45203262aa "pdflatex"
+  "report.bbl" 1737748230.50149 5311 553b9f489f10960278c1dfe26da4432b "bibtex report"
+  "report.out" 1737748690.96131 2837 a8b714ae7c3b12b95d43841a4f99aa7a "pdflatex"
+  "report.tex" 1737748688.2413 45901 2902b5edc7a357edbf4e5339a1a7e831 ""
+  "report.toc" 1737748690.96231 1446 51ed8dbf85aeffb25ab934976ca89122 "pdflatex"
   (generated)
   "report.aux"
   "report.log"
