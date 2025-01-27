@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
-#include "autodiff/forward/dual.hpp"
-#include "autodiff/forward/dual/eigen.hpp"
+#include "lib/autodiff/forward/dual.hpp"
+#include "lib/autodiff/forward/dual/eigen.hpp"
 
 using namespace autodiff;
 

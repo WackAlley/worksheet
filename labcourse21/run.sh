@@ -19,7 +19,7 @@ fi
 
 # Compile the C++ file
 echo "Compiling $CPP_FILE..."
-g++ -o "$OUTPUT_DIR/$OUTPUT_FILE" "$CPP_FILE"
+g++ -o -I /lib/autodiff "$OUTPUT_DIR/$OUTPUT_FILE" "$CPP_FILE"
 
 # Check if the compilation was successful
 if [ $? -eq 0 ]; then
