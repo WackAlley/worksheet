@@ -331,7 +331,7 @@ class Transformer(nn.Module):
             the Transformer layers and the final linear projection.
         """
 
-        ic(input.shape)
+        # ic(input.shape)
         # input = self.one_hot_encode(input)
         #ic(input.shape)
 

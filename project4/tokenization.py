@@ -1,6 +1,7 @@
 import torch
 import re
 import math
+from icecream import ic
 
 # read and tokenize text
 # from https://itp.uni-frankfurt.de/~gros/Vorlesungen/ML/2024_ML02_Generative_Architectures.html#(25)
@@ -44,5 +45,8 @@ K = torch.rand(nC, nHead)  # Key
 Q = torch.rand(nC, nHead)  # Query
 
 linear_attention = torch.matmul(Q,K.T) + ALiBi_tensor
+# linear_attention = torch.einsum('ij,jk -> ik', Q,K)
+
+
 
 
