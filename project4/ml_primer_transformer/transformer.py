@@ -227,15 +227,12 @@ class TransformerLayer(nn.Module):
             self-attention, feed-forward network, and residual connections.
         """
 
-        assert (input.dim() == 3
-                ),f"Expected input of shape (batch_size, len, embedding_dim) but got shape {input.shape}"
-        assert (
-                 input.shape[2] == self.embedding_dim
-        ), "Transformer input needs to be of size embedding_dim (for each batch)."
+        assert (input.dim() == 3),f"Expected input of shape (batch_size, len, embedding_dim) but got shape {input.shape}"
+        assert (input.shape[2] == self.embedding_dim), "Transformer input needs to be of size embedding_dim (for each batch)."
 
         normed_input = self.norm1(input)
-        # affine(linear) transformations to transform input into values, keys and querrys are implemented in attention mechanism
-        # In that way only one tensor (input) needs to pe passed, instead of three (calue, key, querry)
+        #  affine(linear) transformations to transform input into values, keys and querrys are implemented in attention mechanism
+        #  In that way only one tensor (input) needs to pe passed, instead of three (calue, key, querry)
         attention = self.attention(normed_input, alibi_bias = alibi_bias, mask = mask)
         x = attention + input  # skipp connection for attention
 
@@ -331,16 +328,13 @@ class Transformer(nn.Module):
             the Transformer layers and the final linear projection.
         """
 
-        ic(input.shape)
+        # ic(input.shape)
         # input = self.one_hot_encode(input)
         #ic(input.shape)
 
         # input dimensions: batch_size, sequence_len, embedding_dim
-        assert (input.dim() == 3
-                ),f"Expected input of shape (batch_size, len, embedding_dim) but got shape {input.shape}"
-        assert (
-                 input.shape[2] == self.embedding_dim
-        ), "Transformer input needs to be of size embedding_dim (for each batch)."
+        assert (input.dim() == 3),f"Expected input of shape (batch_size, len, embedding_dim) but got shape {input.shape}"
+        assert (input.shape[2] == self.embedding_dim), "Transformer input needs to be of size embedding_dim (for each batch)."
 
         """
         out = self.dropout(
