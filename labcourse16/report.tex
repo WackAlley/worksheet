@@ -397,7 +397,7 @@ mit $i $= 0$ns$, 96$ns$.
 	\caption{Eichgerade Kanallage-Zeit}
 	\label{fig:timecalibrate}
 \end{figure}
-Mit der Zeiteichung können wir die Zeitauflösung bestimmen. Sie ergibt sich aus der Bestimmung der Breite der Gaußen Verteilungen bei halber Höhe (FWHM: Full Width at Half Maximum). Dazu kann entweder der x-Wert bei halber Höhe bestimmt werden (für diese Methode verwenden wir die Bezeichnung FWHM$_{1}$), oder die Standardabweichung verwendet werden, um die Breite direkt zu bestimmen: $\text{FWHM}_{2} =2 \sqrt{2\ln 2}\sigma $ {\color{red} citation, try}. Ersteres kann numerisch mit \texttt{numpy.interp} durchgeführt werden, in dessen Dokumentation keine Ungenauigkeitbestimmung gegeben ist. Die Ungenauigkeit bestimmen wir daher nur im Bezug auf die Ungenauigkeit des Kalibrationsparameters:
+Mit der Zeiteichung können wir die Zeitauflösung bestimmen. Sie ergibt sich aus der Bestimmung der Breite der Gaußen Verteilungen bei halber Höhe (FWHM: Full Width at Half Maximum). Dazu kann entweder der x-Wert bei halber Höhe bestimmt werden, oder die Standardabweichung verwendet werden, um die Breite direkt zu bestimmen: $\text{FWHM} =2 \sqrt{2\ln 2}\sigma$ \cite{FWHM}. Ersteres kann numerisch mit \texttt{numpy.interp} durchgeführt werden, in dessen Dokumentation keine Ungenauigkeitbestimmung gegeben ist. Die Ungenauigkeit bestimmen wir daher nur im Bezug auf die Ungenauigkeit des Kalibrationsparameters:
 \begin{align}
 	\Delta \text{FWHM} &= \sqrt{ (x_2 - x_1)^2\Delta^2 b }.
 \end{align}
