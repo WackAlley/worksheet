@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{7}%
+\begin{thebibliography}{11}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -49,6 +49,18 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Boyanovsky}\ and\ \citenamefont {Lello}(2014)}]{Boyanovsky_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Boyanovsky}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Lello}},\ }\bibfield  {title} {\bibinfo {title} {Time evolution of cascade decay},\ }\href {https://doi.org/10.1088/1367-2630/16/6/063050} {\bibfield  {journal} {\bibinfo  {journal} {New Journal of Physics}\ }\textbf {\bibinfo {volume} {16}},\ \bibinfo {pages} {063050} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Traczyk}(3 18)}]{Traczyk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Traczyk}},\ }\href {https://home.cern/news/news/physics/largest-matter-antimatter-asymmetry-observed?utm_source=chatgpt.com} {\bibinfo {title} {Largest matter-antimatter asymmetry observed}} (\bibinfo {year} {2022-03-18}),\ \bibinfo {note} {accessed: 2025-01-24}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Andersson~Sunden}\ \emph {et~al.}(2024)\citenamefont {Andersson~Sunden}, \citenamefont {Gustavsson}, \citenamefont {G\"o\"ok}, \citenamefont {Ivarsson~Biebel}, \citenamefont {Jansson}, \citenamefont {Jarl~Holm}, \citenamefont {S\"oderstr\"om}, \citenamefont {Wallentin},\ and\ \citenamefont {Andersson}}]{AnderssonSunden1901549}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Andersson~Sunden}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Gustavsson}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {G\"o\"ok}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Ivarsson~Biebel}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Jansson}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Jarl~Holm}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {S\"oderstr\"om}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Wallentin}},\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Andersson}},\ }\href {https://www.uu.se/en/centre/alva-myrdal/annual-conference/amc-annual-conference-2024} {\bibinfo {title} {Geco : A gamma-ray spectroscopy system for evaluation of coincidence methods in radionuclide monitoring}} (\bibinfo {year} {2024})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {\text{R. Aaij et} \textit{al}.}(2011)}]{PhysRevD.84.092001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {\text{R. Aaij et} \textit{al}.}} (\bibinfo {collaboration} {The LHCb Collaboration}),\ }\bibfield  {title} {\bibinfo {title} {Measurements of the branching fractions for ${B}_{(s)}\ensuremath{\rightarrow}{D}_{(s)}\ensuremath{\pi}\ensuremath{\pi}\ensuremath{\pi}$ and ${\ensuremath{\Lambda}}_{b}^{0}\ensuremath{\rightarrow}{\ensuremath{\Lambda}}_{c}^{+}\ensuremath{\pi}\ensuremath{\pi}\ensuremath{\pi}$},\ }\href {https://doi.org/10.1103/PhysRevD.84.092001} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {84}},\ \bibinfo {pages} {092001} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {K.~Stelzer}(2024)}]{manual1}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~K.}\ \bibnamefont {K.~Stelzer}},\ }\href@noop {} {\emph {\bibinfo {title} {Versuch 16: $\gamma-\gamma$-Winkelkorrelationen und Koinzidenztechnkik}}} (\bibinfo {year} {2024})\BibitemShut {NoStop}%

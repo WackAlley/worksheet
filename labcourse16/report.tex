@@ -25,9 +25,9 @@ prd,
 	\begin{center}		
 		\textbf{Abstract}
 	\end{center}\par
-Mithilfe der Gammaquantenspektroskopie können koinzidente Gammaquanten aus Kernzerfällen detektiert werden. In diesem Versuch werden Kernzerfälle von $^{22}$Natrium und $^{60}$Cobalt untersucht. Als Detektor werden Szintillationsdetektoren verwendet, bestehend aus Natriumiodid(NaI)-Kristallen mit Thallium(Tl)-Dotierung. Durch die Betrachtung der Winkelabhängigkeit der ausgesendeten Gammaquanten lassen sich Aussagen über die Art der Kernzerfälle treffen.\par 
-Die Durchführung ist grob unterteilt in zwei Abschnitten: die Kalibration und die Koinzidenzspektroskopie von Natrium und Cobalt. Für die Kalibration werden die vollen Energiespektren der Quellen sowie die Zeitspektren bei zwei Verzögerungseinstellungen des Timing Single Channel Analysers (TSCA), 0$ns$ und 96$ns$, erfasst. Zu den Spektren werden passende Verteilungsfunktionen gefittet; in diesem Versuch verwenden wir zum numerischen Fit die Pythonbibliotheken \texttt{emcee} für multimodale Verteilungen und \texttt{scipy.optimize} für die unimodale Gaußverteilung.\par
-Ziel der Koinzidenzspektroskopie ist es, die Kernzerfälle sowie die Winkelkorrelationen, die wir aus der Theorie wissen, experimentell zu bestätigen. Aus diesem Versuch lernen wir auch über die Wichtigkeit der Zeitauflösung der gemessenen Signale am Gerät.
+Mithilfe der Gammaquantenspektroskopie können koinzidente Gammaquanten aus Kernzerfällen selektiert werden. In diesem Versuch werden Kernzerfälle von $^{22}$Natrium und $^{60}$Cobalt untersucht. Als Detektoren werden Szintillationsdetektoren verwendet, bestehend aus Natriumiodid(NaI)-Kristallen mit Thallium(Tl)-Dotierung. Durch die Betrachtung der Winkelabhängigkeit der ausgesendeten Gammaquanten lassen sich Aussagen über die Art der Kernzerfälle treffen.\par 
+Die Durchführung ist unterteilt in zwei Abschnitten: die Kalibration und die Koinzidenzspektroskopie von Natrium und Cobalt. Für die Kalibration werden die vollen Energiespektren der Quellen sowie die Zeitspektren bei zwei Verzögerungseinstellungen des Timing Single Channel Analysers (TSCA), 0$ns$ und 96$ns$, erfasst. Zu den Spektren werden passende Verteilungsfunktionen gefittet; in diesem Versuch verwenden wir zum numerischen Fit die Pythonbibliotheken \texttt{emcee} für multimodale Verteilungen und \texttt{scipy.optimize} für die unimodale Gaußverteilung.\par
+Ziel der Koinzidenzspektroskopie ist es, die Kernzerfälle sowie die Winkelkorrelationen, die aus der Theorie bekannt sind, experimentell zu bestätigen. Aus diesem Versuch lernen wir auch über die Wichtigkeit der Zeitauflösung der gemessenen Signale am Gerät.
 \end{tcolorbox}
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,8 +54,10 @@ Ziel der Koinzidenzspektroskopie ist es, die Kernzerfälle sowie die Winkelkorre
 
 \section{Einführung}
 \label{sec:Einführung}
-
-
+Kaskadenzerfälle $-$ das sind Zerfälle $A \to BC \to BXY$ mit einem temporären, metastabilen Zwischenzustand $-$ gehören zu den physikalischen Forschungsthemen mit weitreichenden Implikationen (Boyanovsky $\&$ Lello \cite{Boyanovsky_2014}). Die von Boyanovsky $\&$ Lello genannten Beispiele beschränken sich auf teilchenphysikalische Untersuchungen wie z.B. von B-Mesonzerfällen, die von der Large Hadron Collider beauty (LHCb) Collaboration durchgeführt wird \cite{Traczyk}. Es wird vermutet, dass Kaskadenzerfälle ein grundlegender Mechanismus hinter Paritätsverletzungen sein könnten, was wiederum Implikationen für das Standardmodell der Physik hat. \par
+Ein Beispiel aus der Kernphysik ist die Detektion von Radionuklidzerfällen mittels Koinzidenzmessung von Sund\`en et \textit{al.}\cite{AnderssonSunden1901549}. Die Detektion wird für das Kontrollieren von Atomwaffentests verwendet und trägt somit eine besondere geopolitische Bedeutung. \par
+Beide Beispiele haben die Gemeinsamkeit, dass präzise Messungen gewährleistet werden müssen: Im Falle von LHCb erfolgt die Detektion von Teilchen mit einem einarmigen Spektrometer und einem high-precision tracking system \cite{PhysRevD.84.092001}, während bei Koinzidenzmessungen eine hohe Zeitauflösung und das Minimieren von Hintergrundaktivitäten von höchster Priorität sind.\par
+Das Ziel dieses Versuchs ist es, von der Theorie erwartete Koinzidenzen von Gammaquanten aus Kernzerfällen nachzuweisen und die Genauigkeit der Messmethode zu untersuchen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -67,14 +69,13 @@ Ziel der Koinzidenzspektroskopie ist es, die Kernzerfälle sowie die Winkelkorre
 
 \subsection{Kernzerfälle}
 \label{sec:Kernzerfälle}
-Für diesen Versuch beschränken wir uns auf die theoretischen Grundlagen der Atomphysik und auf diejenigen Aspekten darin, die tatsächlich in diesem Versuch relevant sind. \par
 Atome bestehen aus Nukleonen (Protonen und Neutronen) und Elektronen. Die Atomsorten $^{22}$Na und $^{60}$Co, die wir betrachten, werden auch als radioaktive Nuklide bezeichnet, und geben an, dass ihre Zusammensetzung instabil ist und sie zu kleineren Teilchen zerfallen. Dabei ist die Summe der Nukleonenzahl $A$ (auch Massezahl genannt) der entstandenen Teilchen gleich der des zerfallenen Teilchens. \par
-Es gibt verschiedene Zerfallsarten; $\alpha, \beta^+, \beta^-$ und $\gamma-$Zerfall. Bei einem $\alpha-$Zerfall sendet das Atom ein $\alpha-$Teilchen aus, was einem $^4$He-Teilchen entspricht, und seine Massezahl verringert sich auf $A - 4$. Bei den $\beta-$Zerfällen wird entweder ein Neutron durch Aussenden eines Elektrons ($\beta^-$) und Anitneutrios ($\bar \nu$) in ein Proton umgewandelt, oder ein Proton in ein Neutron durch Aussenden eines Positrons ($\beta^+$) und Neutrinos ($\nu$). Bei den $\beta-$Zerfällen ändert sich die Massezahl nicht. \par
+Es gibt verschiedene Zerfallsarten; $\alpha, \beta^+, \beta^-$ und $\gamma-$Zerfall. Bei einem $\alpha-$Zerfall sendet das Atom ein $\alpha-$Teilchen aus, was einem $^4$He-Teilchen entspricht, und seine Massezahl verringert sich auf $A - 4$. Bei den $\beta-$Zerfällen wird entweder ein Neutron durch Aussenden eines Elektrons ($\beta^-$) und Antineutrinos ($\bar \nu$) in ein Proton umgewandelt, oder ein Proton in ein Neutron durch Aussenden eines Positrons ($\beta^+$) und Neutrinos ($\nu$). Bei den $\beta-$Zerfällen ändert sich die Massezahl nicht. \par
 Wenn das entstandene Teilchen sich in einem angeregten Zustand befindet, geht es zum Grundzustand durch Emission von Photonen ($\gamma$). \par
-Radionuklide unterscheiden sich in der Art und Reihenfolge dieser Zerfälle. Ihre Zerfälle kann man mit einem Zerfallsschema darstellen. Die Zerfallsschemata \ref{fig:decaysodium} und \ref{fig:decaycobalt} sind folgendermaßen zu verstehen: rot mit Prozent angegeben sind die Wahrscheinlichkeiten der Zerfallsart; blau angegeben sind die $\gamma-$Zerfälle mit jeweils Energie in keV und Intensität/Wahrscheinlichkeit in Prozent, und in schwarz sind die Energieniveaus in keV. \vspace{15pt}\par
+Radionuklide unterscheiden sich in der Art und Reihenfolge dieser Zerfälle. Ihre Zerfälle kann man mit einem Zerfallsschema darstellen. Die Zerfallsschemata in Abbildung \ref{fig:decaysodium} und Abbildung \ref{fig:decaycobalt} sind folgendermaßen zu verstehen: rot mit Prozent angegeben sind die Wahrscheinlichkeiten der Zerfallsart; blau angegeben sind die $\gamma-$Zerfälle mit jeweils Energie in keV und Intensität/Wahrscheinlichkeit in Prozent, und in schwarz sind die Energieniveaus in keV. \vspace{15pt}\par
 \textbf{Natrium Zerfallsschema} \par
-Das Zerfallsschema ist in Abbildung \ref{fig:decaysodium} zu sehen. $^{22}$Na zerfällt zunächst durch $\beta^+ -$Zerfall zu einem angeregten Neonatom, was wiederum durch das Aussenden eines 1274,5keV $\gamma-$Quants zum stabilen Neon zerfällt. Das besondere bei diesem Zerfall ist, dass das ausgesendete Positron mit einem Elektron annihilieren kann. Bei dieser Annihilation werden zwei entgegengesetzte $\gamma-$Quanten mit jeweils 511keV ausgesendet, welche zusammen der Ruheenergie des Elektron-Positron Paars entsprechen. Da diese Annihilation überwiegend aus einem ruhenden System hervorgeht \cite{manual1}, müssen die Ausrichtungen der beiden Gammaquanten gemäß der Impulserhaltung entgegengesetzt sein. \par
-Im Zerfallsschema in Abbildung \ref{fig:decaysodium} sehen wir auch, dass zu 0.056$\%$ die Möglichkeit besteht, dass das Natriumatom direkt durch einen einzigen $\beta^+ -$Zerfall zu stabiles Neon zerfallen kann. Aufgrund der niedrigen Wahrscheinlichkeit ist dieser Zerfall im Versuch nicht zu erwarten.
+Das Zerfallsschema von Natrium ist in Abbildung \ref{fig:decaysodium} zu sehen. $^{22}$Na zerfällt zunächst durch $\beta^+ -$Zerfall zu einem angeregten Neonatom, was wiederum durch das Aussenden eines 1274,5keV $\gamma-$Quants zum stabilen Neon zerfällt. Das besondere bei diesem Zerfall ist, dass das ausgesendete Positron mit einem Elektron annihilieren kann. Bei dieser Annihilation werden zwei entgegengesetzte $\gamma-$Quanten mit jeweils 511keV ausgesendet, welche zusammen der Ruheenergie des Elektron-Positron Paars entsprechen. Da diese Annihilation überwiegend aus einem ruhenden System hervorgeht \cite{manual1}, müssen die Ausrichtungen der beiden Gammaquanten gemäß der Impulserhaltung entgegengesetzt sein. \par
+Das Zerfallsschema in Abbildung \ref{fig:decaysodium} zeigt zudem, dass zu 0.056$\%$ die Möglichkeit besteht, dass das Natriumatom direkt durch einen einzigen $\beta^+ -$Zerfall zu stabiles Neon zerfallen kann. Aufgrund der niedrigen Wahrscheinlichkeit ist dieser Zerfall im Versuch nicht zu erwarten.
 \begin{figure}[ht]
 	\includegraphics[scale=.4]{"images/Decay Sodium".png}
 	\caption{Zerfallsschema $^{22}$Na, aus \url{https://www.nndc.bnl.gov/nudat3}\cite{BASUNIA201569}}
@@ -87,7 +88,7 @@ Im Zerfallsschema in Abbildung \ref{fig:decaysodium} sehen wir auch, dass zu 0.0
 	\caption{Zerfallsschema $^{60}$Co, aus \url{https://www.nndc.bnl.gov/nudat3}\cite{BROWNE20131849}}
 	\label{fig:decaycobalt}
 \end{figure}
-Für das Zerfallsschema siehe Abbildung \ref{fig:decaycobalt}. Cobalt zerfällt zunächst durch $\beta^- -$Zerfall zu einem angeregten Nickelatom. Dieses angeregte Nickelatom geht eine Reihe an $\gamma -$Zerfällen durch, was auch als Kaskadenzerfall bezeichnet wird. Wir beschränken uns hier ebenfalls auf die Zerfälle mit höchster Wahrscheinlichkeit; wie man in Abbildung \ref{fig:decaycobalt} sieht, sind die Wahrscheinlichkeiten anderer Zerfälle vernachlässigbar klein. Die zu betrachtende Gammazerfallskaskade besteht aus einem 1173.2keV-Gammazerfall und einem 1332.5keV-Gammazerfall. 
+Das Zerfallsschema von Coblat wird in Abbildung \ref{fig:decaycobalt} dargestellt. Cobalt zerfällt zunächst durch einen $\beta^- -$Zerfall zu einem angeregten Nickelatom. Dieses angeregte Nickelatom geht eine Reihe an $\gamma -$Zerfällen durch, was auch als Kaskadenzerfall bezeichnet wird. Wir beschränken uns hier ebenfalls auf die Zerfälle mit höchster Wahrscheinlichkeit; wie Abbildung \ref{fig:decaycobalt} zeigt, sind die Wahrscheinlichkeiten anderer Zerfälle vernachlässigbar klein. Die zu betrachtende Gammazerfallskaskade besteht aus einem 1173.2keV-Gammazerfall und einem 1332.5keV-Gammazerfall. 
 
 \subsection{Winkelkorrelation}
 \label{sec:Winkelkorrelation}
@@ -128,7 +129,7 @@ Für die Berechnung der Winkelverteilungsfunktion des 4-2-0 Kaskadenzerfalls fol
 	W(\vartheta) &= 1 + F_2(2,4,2,2)F_2(2,0,2,2)P_2(\vartheta) + F_4(2,4,2,2)F_4(2,0,2,2)P_4(\vartheta) \\
 	W(\vartheta) &= 1 + 0.1020 P_2(\vartheta) + 0.009087 P_4(\vartheta). \nonumber
 \end{align}
-Die Winkelkorrelationen verschiedener Kaskadenzerfälle können dann gegen den Winkel aufgetragen werden, wie in Abbildung \ref{fig:angularcorrelation}. Wir erkennen hierbei, dass es für den 4-2-0 Kaskadenzerfall einen "sweet-spot" Winkel gibt, bei der $W(\vartheta)=1$ beträgt. Dieser Winkel liegt ungefähr bei 55°, genau berechnet liegt er bei 53.28°. Dieser "sweet-spot" Winkel wird später für die Berechnung der Zählrate und der Quellstärke wichtig sein. Näheres dazu siehe \ref{sec:Koinzidenzspektroskopie}.
+Die Winkelkorrelationen verschiedener Kaskadenzerfälle können dann gegen den Winkel aufgetragen werden, wie in Abbildung \ref{fig:angularcorrelation} dargestellt. Wir erkennen hierbei, dass es für den 4-2-0 Kaskadenzerfall einen "sweet-spot" Winkel gibt, bei der $W(\vartheta)=1$ beträgt. Dieser Winkel liegt ungefähr bei 55°, genau berechnet liegt er bei 53.28°. Dieser "sweet-spot" Winkel wird später für die Berechnung der Zählrate und der Quellstärke wichtig sein. Näheres dazu siehe \ref{sec:Koinzidenzspektroskopie}.
 \begin{figure}[ht]
 		\includegraphics[scale=1]{"plots/Winkelkorrelationen".pdf}
 	\caption{Winkelkorrelationsfunktion für verschiedene Zerfallskaskaden. Hergestellt mit \texttt{matplotlib}}
@@ -145,15 +146,15 @@ Der Compton-Effekt beschreibt den Impulsstoß zwischen Photon und Elektron. Beim
 \begin{align*}
 	\lambda ' = \lambda + \frac{h}{m\cdot c} \left( 1-\cos (\vartheta) \right),
 \end{align*}
-wobei $\lambda$ die Wellenlänge des eingehenden Photones und $\lambda$ die Energie des reflektierten Photons angibt. Die Reflektion ist somit bei 180° maximal, bei 0° minimal. Photonen, die durch die Comptonstreuung vom Detektor reflektiert werden, können bei günstig liegendem Winkel den \\ gegenüberliegenden Detektor erreichen und dort als Signal absorbiert werden. Wie wir bei den Energiespektren sehen werden, ist dieser Compton-Effekt für kleinere Peaks bei mittleren Energien verantwortlich.\vspace{15pt}\par
+wobei $\lambda$ die Wellenlänge des eingehenden Photons und $\lambda '$ die Energie des reflektierten Photons angibt. Die Reflektion ist somit bei 180° maximal, bei 0° minimal. Photonen, die durch die Comptonstreuung vom Detektor reflektiert werden, können bei günstig liegendem Winkel den \\ gegenüberliegenden Detektor erreichen und dort als Signal absorbiert werden. Wie wir bei den Energiespektren sehen werden, ist dieser Compton-Effekt für kleinere Peaks bei mittleren Energien verantwortlich.\vspace{15pt}\par
 \textbf{Signalgebung}\par
-Wie beim Photoeffekt besprochen, kommen die niederenergetischen Photonen an der Photokathode an. Diese passieren durch einen Sekundärelektronenvervielfacher und lösen freie Elektronen heraus. Die freien Elektronen werden durch eine Elektrode fokussiert und auf eine Dynode beschleunigt \cite{manual1}. Die beschleunigten Elektronen stoßen auf weitere Elektronen und lösen sie wiederum heraus, bis all diese Elektronen an der Anode ankommen und ein elektrisches Signal erzeugen. \cite{manual1}
+Wie beim Photoeffekt besprochen, kommen die niederenergetischen Photonen an der Photokathode an. Diese passieren einen Sekundärelektronenvervielfacher und lösen freie Elektronen heraus. Die freien Elektronen werden durch eine Elektrode fokussiert und auf eine Dynode beschleunigt \cite{manual1}. Die beschleunigten Elektronen stoßen auf weitere Elektronen und lösen sie wiederum heraus, bis all diese Elektronen an der Anode ankommen und ein elektrisches Signal erzeugen. \cite{manual1}
 \subsection{Koinzidenzspektroskopie}
 \label{sec:Koinzidenzspektroskopie}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent \textbf{Verteilungsspektren der Signale}\\
-Eine dezidierte Betrachtung der statistischen Natur der Zählrate ist in \cite{gilmore2008practical} Kapitel 5, \textit{Statistics of Counting} zu finden, an der wir uns für die grobe Überlegung orientieren. Die für die Praxis wichtigen Formeln der Zählrate, Quellstärke und Winkelkorrelation sind von der Versuchsanleitung \cite{manual1} übernommen. Zweck der statistischen Betrachtung ist es, kurz beschreiben, welche Funktionen wir für die Parametriesierung der Energiespektraverwenden verwendet haben und warum. Auch könnte die statistische Betrachtung für das Parametrisieren der "Hintergrundsstrahlung" nützlich sein, die in diesem Versuch nicht auf theoretisch fester Basis durchgeführt wurde (Es wurde eine exponentielle oder lognormale Verteilung angenommen).\\
+Eine dezidierte Betrachtung der statistischen Natur der Zählrate ist in \cite{gilmore2008practical} Kapitel 5, \textit{Statistics of Counting} zu finden, an der wir uns für die grobe Überlegung orientieren. Die für die Praxis wichtigen Formeln der Zählrate, Quellstärke und Winkelkorrelation sind von der Versuchsanleitung \cite{manual1} übernommen. Zweck der statistischen Betrachtung ist es, kurz zu beschreiben, welche Funktionen wir für die Parametriesierung der Energiespektra verwendet haben und warum. Auch könnte die statistische Betrachtung für das Parametrisieren der "Hintergrundsstrahlung" nützlich sein, die in diesem Versuch nicht auf theoretisch fester Basis durchgeführt wurde (Es wurde eine exponentielle oder lognormale Verteilung angenommen).\\
 Die Anzahl an Signalen, die vom Detektor weiterverarbeitet werden, hängt von der Zahl der Photonen ab, die Zahl der Photonen wiederum von der Zerfallsrate $Q$ des Atoms:
 \begin{align}
 	Q &= \frac{dN}{dt} = \lambda N, 
@@ -177,24 +178,23 @@ Für Verteilungen von positiven Zahlen kann statt der Normalverteilung die logno
 \begin{align}
 	\label{eq:lognormal}
 	P_{logn}(x) &= \frac{1}{x \cdot \sigma \sqrt{2\pi}} \exp \left[ -\frac{1}{2} \left ( \frac{\ln x - \mu}{\sigma} \right )^2  \right].
-\end{align}
-\newpage
-\noindent \textbf{Zählrate, Quellstärke}\\
+\end{align}\par
+\textbf{Zählrate, Quellstärke}\\
 Die Zählrate eines Detektors setzt sich aus der Quellstärke/Zerfallsrate $Q$, dem Raumwinkel $w$ und der Ansprechempfindlichkeit $\epsilon$ des Detektors zusammen:
 \begin{align}
 	Z &= \epsilon w Q \\
 	w &= \frac{f}{4 \pi r^2} \nonumber,
 \end{align}
-wobei $f$ die Detektorstirnfläche und $r$ der Abstand zwschen Detektor und Quelle ist. \\
+wobei $f$ die Detektorstirnfläche und $r$ der Abstand zwischen Detektor und Quelle ist. \\
 Eine Koinzidenz besteht, wenn die Signale zweier Detektoren innerhalb eines Zeitfensters sind. Beim Beispiel der Vernichtungsstrahlung sollte der zeitliche Abstand der beiden Gammaquanten (bei gleichem Abstand zu ihrem jeweiligen Detektor) minimal sein und (theoretisch) stets kleiner als das Zeitfenster sein. Die Koinzidenzrate ist die Multiplikation der Zählrate eines Detektors mit der Auftrittswahrscheinlichkeit eines Signals beim zweiten Detektor. Diese Wahrscheinlichkeit beträgt bei einem zweiten Detektor 2 $\epsilon_2w_2W(\vartheta)$, wobei $W(\vartheta)$ die in \ref{sec:Winkelkorrelation} eingeführte Winkelkorrelationsfunktion ist. Insgesamt ergibt sich für die Koinzidenzrate $Z$:
 \begin{align}
 	Z_{Ke} &= Z_1 \cdot \epsilon_2w_2W(\vartheta) = \epsilon_1 w_1 Q \epsilon_2 w_2 W(\vartheta).
 \end{align}
-Hierbei handelt es sich um die "echte" Koinzidenzrate $Z_{Ke}$. Es besteht auch die Möglichkeit, dass sich zwei physikalisch unkorrelierte Signale per Zufall im selben Zeitfenster befinden und als Koinzidenz wahrgenommen werden. Diese "zufällige" Koinzidenzrate wird vor allem durch die endliche Koinzidenzauflösungszeit $\tau_K$ des signalverarbeitenden Geräts vergrößert. Die zufällige Koinzidenzrate besagt, wie oft ein Zweitsignal innerhalb der Pulslänge $\tau$ des ersten Signals auftritt. Wenn der Erstsignal mit einer Wahrscheinlichkeit von $Z_1 \tau$ auftritt, dann ergibt sich für die zufällige Koinzidenzrate $K_{Kz}$:
+Hierbei handelt es sich um die "echte" Koinzidenzrate $Z_{Ke}$. Es besteht auch die Möglichkeit, dass sich zwei physikalisch unkorrelierte Signale per Zufall im selben Zeitfenster befinden und als Koinzidenz wahrgenommen werden. Diese "zufällige" Koinzidenzrate wird vor allem durch die endliche Koinzidenzauflösungszeit $\tau_K$ des signalverarbeitenden Geräts vergrößert. Die zufällige Koinzidenzrate besagt, wie oft ein Zweitsignal innerhalb der Pulslänge $\tau$ des ersten Signals auftritt. Wenn das Erstsignal mit einer Wahrscheinlichkeit von $Z_1 \tau$ auftritt, dann ergibt sich für die zufällige Koinzidenzrate $K_{Kz}$:
 \begin{align}
 	Z_{Kz} &= \tau Z_1 Z_2.
 \end{align}
-Das Verhältnis zu echter und zufällige Koinzidenzrate kann verwendet werden, um die Zerfallsrate und Winkelkorrelationsfunktion darszustellen:
+Das Verhältnis von echter und zufälliger Koinzidenzrate kann verwendet werden, um die Zerfallsrate und Winkelkorrelationsfunktion darzustellen:
 \begin{align}
 	\frac{Z_{Ke}}{Z_{Kz}} &= \frac{W(\vartheta)}{\tau Q} \\
 	\frac{Z_{Ke}}{Z_1Z_2} &= \frac{W(\vartheta)}{Q}. \label{eq:qvalue}
@@ -208,10 +208,10 @@ Hier spielt auch der in \ref{sec:Winkelkorrelation} erwähnte "sweet-spot" Winke
 	\caption{Versuchsaufbau. Zu erkennen sind die zwei Detektoren und die signalverarbeitende Apparatur}
 	\label{fig:setting}
 \end{figure}
-In \ref{fig:setting} ist zu sehen, wie die Szintillationsdetektoren mit dem signalverarbeitendem Gerät verbunden sind. Die Apparatur besteht aus
+In Abbildung ref{fig:setting} zeigt, wie die Szintillationsdetektoren mit dem signalverarbeitendem Gerät verbunden sind. Die Apparatur besteht aus
 \begin{itemize}
-	\item dem PMT, hier als \textit{DDL Amp} bezeichnet
-	\item dem \textit{Timing Single Channel Analyser} (TSCA), das das vom PMt angekommene Signal in ein starkes positives Rechtecksignal von 5V und ein schwaches negatives Rechtecksignal von -0.5V umwandelt
+	\item dem \textit{Digital Data Link Amplifier} (DDL Amp) 
+	\item dem \textit{Timing Single Channel Analyser} (TSCA), das das vom PMT angekommene Signal in ein starkes positives Rechtecksignal von 5V und ein schwaches negatives Rechtecksignal von -0.5V umwandelt
 	\item dem \textit{Time to Pulse Height Converter} (TPHC)
 	\item dem \textit{Analog to Digital Converter} (ADC), dessen \textit{Gate} die Funktion eines input gates spielt, d.h. ein einkommendes Signal anzunehmen oder zu verweigern,
 	\item und dem \textit{Multi Channel Analyser}, der die Signalstärken bei den verschiedenen Kanälen darstellt.
@@ -222,18 +222,18 @@ In \ref{fig:setting} ist zu sehen, wie die Szintillationsdetektoren mit dem sign
 \section{Durchführung}
 \label{sec:Durchführung und Resultate}
 \subsection{Energiegesamtspektra; Kalibration Kanallage-Energie}
-Um die Kanallagen als Energiewerte in keV zu interpretieren, muss eine zugehörige Kalibration durchgeführt werden. Wir beruhen uns auf die Tatsache, dass die Kanallagen des TSCA linear proportional zur Energie von einer Genauigkeit von 1keV sind \cite{manualold}:
+Um die Kanallagen als Energiewerte in keV zu interpretieren, muss eine zugehörige Kalibration durchgeführt werden. Wir beruhen uns auf der Tatsache, dass die Kanallagen des TSCA linear proportional zur Energie sind \cite{manualold}:
 \begin{align}
 	E_{\gamma} &= a + b\cdot K,
 	\label{eq:calibrate}
 \end{align}
-mit den zu bestimmenden Parameter $a,b$ und der Kanallage $K$. \\
+mit den zu bestimmenden Parametern $a,b$ und der Kanallage $K$. \\
 Wenn in einem Spektrum zwei Werte auf bestimmten Kanallagen sitzen und deren Energiewerte bekannt sind (wie z.B. die gaußschen Peaks der Gammaquantenenergien), kann man die Parameter $a$ und $b$ bestimmen:
 \begin{align}
 	\Delta E_{\gamma} &= b \Delta K , \\
 	b &= \frac{\Delta E_{\gamma}}{\Delta K},
 \end{align}
-Die Peaks der Gammaquantenenergien können neben dem visuellen Ablesen durch numerische Fits genauer bestimmt werden. Für die multimodale Verteilung der Gesamtenergiespektren verwenden wir die Pythonumgebung \texttt{emcee} \cite{Foreman_Mackey_2013}, die den numerischen Fit mittels Markv-Chain-Monte-Carlo Sampling durchführt. Der Algorithmus ist dabei die sogenannte autocorrelation time Methode \cite{Foreman_Mackey_2013}. Die vertikalen Linien in \ref{fig:so1initial} sind zunächst visuell abgelesene Schätzungen, die für das Angeben der Priors hilfreich sind.\\
+Die Peaks der Gammaquantenenergien können neben dem visuellen Ablesen durch numerische Fits genauer bestimmt werden. Für die multimodale Verteilung der Gesamtenergiespektren verwenden wir die Pythonumgebung \texttt{emcee} \cite{Foreman_Mackey_2013}, die den numerischen Fit mittels Markov-Chain-Monte-Carlo Sampling durchführt. Der Algorithmus ist dabei die sogenannte autocorrelation time Methode \cite{Foreman_Mackey_2013}. Die vertikalen Linien in Abbildung \ref{fig:so1initial} sind visuell abgelesene Schätzungen, die für das Angeben der Priors hilfreich sind.\\
 Zur Veranschaulichung werden die Plots von einem Beispiel (Natrium Detektor 1) dargestellt. Die restlichen Plots sind im Anhang zu finden.
 \begin{figure}[H]
 		\centering
@@ -242,11 +242,11 @@ Zur Veranschaulichung werden die Plots von einem Beispiel (Natrium Detektor 1) d
 		Die zwei Peaks sind zunächst abgeschätzt.}
 		\label{fig:so1initial}
 \end{figure}
-Für den numerischen Fit mittels \texttt{emcee} müssen wir einen Prior angeben; eine Modellfunktion, an der sich der numerische Fit zu richten hat. Wir konstruieren die Modellfunktion als Summe dreier Verteilungsfunktionen: eine Funkiton für die Hintergrundstrahlung (lognormal bzw. exponentielle Verteilung) und zwei Normalverteilungsfunktionen für die Peaks der Gammaquantenenergien:
+Für den numerischen Fit mittels \texttt{emcee} müssen wir einen Prior angeben; eine Modellfunktion, an der sich der numerische Fit zu richten hat. Wir konstruieren die Modellfunktion als Summe dreier Verteilungsfunktionen: eine Funktion für die Hintergrundstrahlung (lognormal bzw. exponentielle Verteilung) und zwei Normalverteilungsfunktionen für die Peaks der Gammaquantenenergien:
 \begin{align}
 	M(\vec{\theta}, x) &= a_1 \cdot P_{ln}((\mu_1,\sigma_1),x) + a_2 \cdot P_{N}((\mu_2,\sigma_2), x) + a_3 \cdot P_{N}((\mu_3,\sigma_3), x) \\
 	P_{ln}((\mu,\sigma), x) &= \frac{1}{x \cdot \sigma \sqrt{2\pi}} \exp \left[ -\frac{1}{2} \left ( \frac{\ln x - \mu}{\sigma} \right )^2  \right] \\
-    P_{gauss}((\mu,sigma), x) &= \frac{1}{\sigma \sqrt{2\pi}} \exp \left[ -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2 \right ] \\
+    P_{gauss}((\mu,\sigma), x) &= \frac{1}{\sigma \sqrt{2\pi}} \exp \left[ -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2 \right ] \\
     \vec{\theta} &= (\mu_1, \mu_2, \mu_3, \sigma_1, \sigma_2, \sigma_3, a_1, a_2, a_3)^T
 \end{align}
 mit dem Hyperparametervektor $\vec\theta$, dessen Werte der numerische Fit bestimmt. Die Werte des Hyperparameters sind im Anhang bei den Cornerplots zu entnehmen. 
@@ -354,38 +354,40 @@ wobei der Index $i = 1,2$ den Detektor angibt.
 	\caption{Eichgerade. Es wurde sowohl eine Natrium, als auch eine Cobalt Eichung durchgeführt. Zweck ist der qualitative Vergleich der Detektoren und der Kalibrationsungenauigkeit.}
 	\label{fig:calibratecurve}
 \end{figure}
-Wir verwenden nun die Natriumeichung, um die die Energie für eine gegebene Kanallage gemäß \ref{eq:calibrate} zu bestimmen. Ein kalibriertes Gesamtspektrum ist in Abbildung \ref{fig:calibratespectrum} zu sehen, für den Rest siehe Anhang \ref{fig:calibratedsodium1} bis \ref{fig:calibratedcobalt2}. 
+Wir verwenden die Natriumeichung, um die Energie für eine gegebene Kanallage gemäß \ref{eq:calibrate} zu bestimmen. Ein kalibriertes Gesamtspektrum ist in Abbildung \ref{fig:calibratespectrum} zu sehen, für die restlichen Spektren siehe Anhang \ref{fig:calibratedsodium1} bis \ref{fig:calibratedcobalt2}. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=.9]{"plots/Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1".pdf}
 	\caption{Kalibriertes Energiegesamtspektrum von Cobalt aus Detektor 1. Bei allen vier Plots wird die Natriumeichung verwendet.}
 	\label{fig:calibratespectrum}
 \end{figure}
+\newpage
 \subsection{Time-delay Spektra, Kalibration Kanallage-Zeit}
-Wir führen eine zum vorherigen Abschnitt analoge Kalibration durch. In diesem Fall haben wir es mit einer unimodalen Verteilung zu tun, weshalb wir für den numerischen Fit die Umgebung \texttt{scipy.optimize} verwenden. Der Vorteil hierbei ist, dass der Fit deutlich schneller fertig ist. Als Vergleich wird noch eine "per Hand" berechnete, analytische Gaußfunktion zum Verleich dargestellt. Die parametrisierten Fits sind in den Abbildungen \ref{fig:timedelay} zu sehen. 
+Wir führen eine zum vorherigen Abschnitt analoge Kalibration durch. Bei dieser Messung folgen die Daten einer unimodalen Verteilung, weshalb wir für den numerischen Fit die Umgebung \texttt{scipy.optimize} verwenden. Der Vorteil hierbei ist, dass der Fitprozess signifikant schneller durchgeführt werden kann. Als Vergleich wird noch eine "per Hand" berechnete, analytische Gaußfunktion zum Verleich dargestellt. Die parametrisierten Fits sind in der Abbildung \ref{fig:timedelay} und Abbildung \ref{fig:timedelay96} zu sehen. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=.8]{"plots/Vergleich gaußscher Fits bei 0ns Delay".pdf}
-	\caption{numerischer Fit für 0ns}
+	\caption{Numerischer Fit für 0ns}
 	\label{fig:timedelay}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=.8]{"plots/Vergleich gaußscher Fits bei 96ns Delay".pdf}
-	\caption{numerischer Fit für 96ns}
+	\caption{Numerischer Fit für 96ns}
+	\label{fig:timedelay96}
 \end{figure}
-Zum Abgleich der Kalibration verwenden wir hier die Zeitdifferenz von 96ns und 0ns und die Differenz in den Peaks der Kanallagen:
+Zum Abgleich der Kalibration verwenden wir hier die Zeitdifferenz von $96$ns und $0$ns und die Differenz in den Peaks der Kanallagen:
 \begin{align}
 	\Delta t &= 96ns = b \cdot \Delta K. 
 \end{align}
-Für die Fehlerfortpflanzung verwenden wir die vom numerischen Fit gegebenen Standardabweichungen $\sigma_{0}=$100.3792 und $sigma_{96}= 100.74068$:
+Für die Fehlerfortpflanzung verwenden wir die vom numerischen Fit gegebenen Standardabweichungen $\sigma_{0}=100.3792$ und $\sigma_{96}= 100.7407$:
 \begin{align}
     \Delta b &= \frac{\Delta t}{(\Delta K)^2} \Delta(\Delta K) \\
     \Delta (\Delta K) &= \sqrt{ \sigma_1^2 + \sigma_2^2 }.
 \end{align}
 Die Eichgerade ist in Abbildung \ref{fig:timecalibrate} zu sehen. Wir kommen auf eine Kalibration von
 \begin{align}
-	t (\text{in $ns$})&= (0.14269008508992875 \pm 0.030161790372228194) \cdot K \\
+	t (\text{in $ns$})&= (0.1428 \pm 0.0302) \cdot K \\
 	\Delta t_{i} &= \sqrt{ (K_i \Delta b)^2 + (b \sigma_i)^2 }
 \end{align}
 mit $i $= 0$ns$, 96$ns$.
@@ -395,7 +397,7 @@ mit $i $= 0$ns$, 96$ns$.
 	\caption{Eichgerade Kanallage-Zeit}
 	\label{fig:timecalibrate}
 \end{figure}
-		Mit der Zeiteichung können wir die Zeitauflösung bestimmen. Sie ergibt sich aus der Bestimmung der Breite der Gaußen Verteilungen bei halber Höhe (FWHM: Full Width at Half Maximum). Der x-Wert bei halber Höhe wird numerisch mit \texttt{numpy.interp} bestimmt, in dessen Dokumentation keine Ungenauigkeitbestimmung gegeben ist. Die Ungenauigkeit bestimmen wir daher nur im Bezug auf die Ungenauigket des Kalibrationsparameters:
+Mit der Zeiteichung können wir die Zeitauflösung bestimmen. Sie ergibt sich aus der Bestimmung der Breite der Gaußen Verteilungen bei halber Höhe (FWHM: Full Width at Half Maximum). Dazu kann entweder der x-Wert bei halber Höhe bestimmt werden (für diese Methode verwenden wir die Bezeichnung FWHM$_{1}$), oder die Standardabweichung verwendet werden, um die Breite direkt zu bestimmen: $\text{FWHM}_{2} =2 \sqrt{2\ln 2}\sigma $ {\color{red} citation, try}. Ersteres kann numerisch mit \texttt{numpy.interp} durchgeführt werden, in dessen Dokumentation keine Ungenauigkeitbestimmung gegeben ist. Die Ungenauigkeit bestimmen wir daher nur im Bezug auf die Ungenauigkeit des Kalibrationsparameters:
 \begin{align}
 	\Delta \text{FWHM} &= \sqrt{ (x_2 - x_1)^2\Delta^2 b }.
 \end{align}
@@ -435,7 +437,7 @@ Als Endwerte bekommen wir
 	\label{tab:coincidenceannihilation}
 \end{table}
 
-Eine grafische Darstellung ist in \ref{fig:coincidenceannihilation} zu sehen. Für die Messungenauigkeit in der Auslenkung werden 0.2$cm$ angenommen, während die Ungenauigkeit der Gesamtzahl sich in die Ungenauigkeit der Zählrate fortpflanzt. Die Gesamtzahl ist eine diskrete, poissonverteilte Größe, deren Standardabweichung die Wurzel des Erwartungswertes $\Delta Z = \sqrt{Z}$ ist. So gilt dann für die Ungenauigkeit der Zählrate $Q$:
+Eine grafische Darstellung ist in Abbildung \ref{fig:coincidenceannihilation} zu sehen. Für die Messungenauigkeit in der Auslenkung werden 0.2$cm$ angenommen, während die Ungenauigkeit der Gesamtzahl sich in die Ungenauigkeit der Zählrate fortpflanzt. Die Gesamtzahl ist eine diskrete, poissonverteilte Größe, deren Standardabweichung die Wurzel des Erwartungswertes $\Delta Z = \sqrt{Z}$ ist. So gilt dann für die Ungenauigkeit der Zählrate $Q$:
 \begin{align}
 	\Delta Q &= \sqrt{ \left( \frac{1}{T}\sqrt{Z}  \right)^2  }
 \end{align}
@@ -446,10 +448,10 @@ Eine grafische Darstellung ist in \ref{fig:coincidenceannihilation} zu sehen. F�
 	\caption{grafische Darstellung der $\gamma - \gamma -$Koinzidenz für die Vernichtungsstrahlung}
 	\label{fig:coincidenceannihilation}
 \end{figure}
-Wir erkennen, dass - anders als von der Theorie erwartet - die maximale Signalstärke nicht bei 180°-Auslenkung der beiden Detektoren liegt, sondern etwas verschoben. Aus der Theorie erwarten wir, dass das Positron bei der Annihilation thermische/nichtrelativistische Geschwindigkeiten besitzt, und daher die Impulserhaltung mit null Anfangsimpuls gilt. In der Realität könnte diese Geschwindigkeit zur Ablenkung in unserer Messung ausgemacht haben. \vspace{10pt}\\
+Wir erkennen, dass - anders als von der Theorie erwartet - die maximale Signalstärke nicht bei 180°-Auslenkung der beiden Detektoren liegt, sondern etwas verschoben. Aus der Theorie erwarten wir, dass das Positron bei der Annihilation thermische/nichtrelativistische Geschwindigkeiten besitzt, und daher die Impulserhaltung mit null Anfangsimpuls gilt. Ein Grund für die von der Theorie abweichenden Impulsrichtungen ist der ungenaue Versuchsaufbau, der zu systematischen Fehlern führen kann. \vspace{10pt}\\
 \textbf{$e^+e^- $ Annihilation und $\gamma$-Zerfall (511keV - 1275keV)}\\
-Es wird erwartet, dass die gemessenen Zählraten kleiner werden als beim vorherigen Versuch. Dies konnte in unserem Fall nicht bestätigt werden. Eine grafische Darstellung ist in Abbildung \ref{fig:coincidenceannihilgamma} zu sehen. Wir erwarten aus der Theorie keine Koinzidenz zwischen den Gammaquanten der Vernichtung und des Gammazerfalls, da die zwei Prozesse unabhängig voneinander ablaufen. Wir erwarten also keine Zeitgleichheit aus einem kausalen Zusammenhang. Aufgrund unserer endlichen Auflösung ist jedoch zu erwarten, dass das Zeitfenster zwischen erstem und zweiten Gammaquant sehr kurz ist, und zu zufälligen Koinzidenzen führen kann. \\
-Würde eine Koinzidenz existieren, müssen wir in der Abblidung eine Winkelabhängigkeit gemäß der Winkelkorrelationsfunktion erkennen. \\
+Es wird erwartet, dass die gemessenen Zählraten kleiner werden als beim vorherigen Versuch. Dies konnte in unserem Fall nicht bestätigt werden. Eine grafische Darstellung ist in Abbildung \ref{fig:coincidenceannihilgamma} zu sehen. Wir erwarten aus der Theorie keine Koinzidenz zwischen den Gammaquanten der Vernichtung und des Gammazerfalls, da die zwei Prozesse unabhängig voneinander ablaufen. Wir erwarten also keine Zeitgleichheit aus einem kausalen Zusammenhang. Aufgrund der endlichen Auflösung ist jedoch zu erwarten, dass das Zeitfenster zwischen erstem und zweiten Gammaquant sehr kurz ist, und zu zufälligen Koinzidenzen führen kann. \\
+Würde eine Koinzidenz existieren, würden wir in der Abblidung eine Winkelabhängigkeit gemäß der Winkelkorrelationsfunktion erkennen. \\
 Für die Messungenauigkeit im Auslenkwinkel werden 2° angenommen, während wir wiederum eine poissonverteilte Ungenauigkeit $\sqrt{Z}$ für die Gesamtzahl $Z$ annehmen. 
 
 \begin{figure}[H]
@@ -508,7 +510,7 @@ Abgesehen von den Fehlern sehen wir, dass die Daten der theoretischen Kurve nur 
 \section{Diskussion}
 \label{sec:Diskussion}
 \textbf{Zu den kalibrierten Energiespektren}\\
-Mit der Natriumeichung erreichen die Maxima der Cobaltspektren die theoretischen Werte von 1173.2$keV$ und 1332.5$keV$. Aus dem Vergleich der Natriumeichung mit der Cobalteichung sehen wir, dass sich die Kalibrationen, abgesheen von der leichten Diskrepanz bei Detektor 2, gut überlappen. Wir bestätigen somit die Qualität der Kalibration, die in Eichlabors wie die Physikalisch-Technische Bundesanstalt Braunschweig angewendet wird \cite{manual1}.\vspace{10pt}\\
+Mit der Natriumeichung erreichen die Maxima der Cobaltspektren die theoretischen Werte von 1173.2$keV$ und 1332.5$keV$. Aus dem Vergleich der Natriumeichung mit der Cobalteichung sehen wir, dass sich die Kalibrationen, abgesehen von der leichten Diskrepanz bei Detektor 2, gut überlappen. Wir bestätigen somit die Qualität der Kalibration, die in Eichlabors wie die Physikalisch-Technische Bundesanstalt Braunschweig angewendet wird \cite{manual1}.\vspace{10pt}\\
 \textbf{Technische Einzelheiten, Datenanalyse}\\
 Eine Kategorie des Fehlers wurde in unserer Durchführung vernachlässigt, und zwar sind es die Fehler vom numerischen Fit mittels MCMC, die im Cornerplot \ref{fig:cornerplot} zu erkennen sind. Wir haben uns dazu entschieden, diese Fehler zunächst auszulassen, da der numerische Fit bereits bei jeder Programmausführung schwankt und der Fehler wenig aussagekräftig ist. Es muss also zunächst sichergestellt werden, dass der numerische Fit reproduzierbare Werte liefert, was durch ein Erhöhen der Iteration (im Moment 500) erreicht werden kann, jedoch würde dies die Ausführungszeit deutlich erhöhen; ein MCMC-Durchlauf dauert bei einem Prozessor mit 6 Kernen mit jeweils 2 Threads etwa eine Minute, bei 2 Kernen mit jeweils 2 Threads bereits fünf Minuten. Eine Lösung dazu wäre es, den Vorgang zu parallelisieren (\texttt{number of parallel jobs = }Anzahl an Kernen). Eine weitere Möglichkeit besteht darin, den Wertebereich von gut bekannten Parametern so klein wie möglich zu halten, was bedeutet, dass Parameterwerte über dem gegebenen Toleranzbeich hinaus gar nicht erst von den MCMC-Ketten akzeptiert werden. Im Programm wird dies durch die \texttt{lnprior}-Funktion ermöglicht. Dazu ist aber entweder ein gutes Vorwissen über die Parameterwerte oder viel Herumprobieren mit dem numerischen Fit erforerlich.\\
 Ziel des numerischen Fits ist die Bestimmung der Maxima und dessen gaußischer Standardabweichung gewesen. Wir haben uns darauf beschränkt, den Highest-Likelihood Fit visuell zu kontrollieren, ob er mit den Datenpunkten übereinstimmt. Auch dies ist vor allem bei Daten mit mehreren Hintergründen nicht gewährleistet; Für die beiden Natriumspektren hat die Modellierung mit drei Funktionen (lognormaler Hintergrund, gaußscher Peak 511$keV$, gaußscher Peak 1275$keV$) gut funktioniert. Für Cobalt jedoch sehen wir (vor allem bei Detekor 1, siehe Abbildung \ref{fig:mcmcfitco1}), dass drei Modellfunktionen nicht ausreichen. Wir vermuten, dass es mehrere Mechanismen für den Hintergrund gegeben hat: Neben der Compton-Rückstreuung können beispielsweise Photonen im Röntgenbereich aus der photoelektrischen Absorption von einem Detektor zum anderen gestreut worden sein. Weitere, jedoch unwahrscheinliche Möglichkeiten sind Aktivitäten von anderen zerfallenden Quellen.\\
@@ -517,7 +519,7 @@ Eine weitere, bisher ununtersuchte jedoch vielversprechende Methode des numerisc
 Gemäß Gilmore et.\textit{al} gilt für dem FWHM von Germaniumdetektoren der Wertebereich 3-10ns (\cite{gilmore2008practical} S. 52), eine deutlich bessere Zeitauflösung. Entsprechend dieser Literatur wäre ein Abgleich mit Herstellerangaben nützlich, um den von uns berecheten Wert bezüglich der Durchführungsqualität und der Detektroqualität zu interpretieren. Eine Angabe zu unserem Equipment ist in \cite{ortec} zu finden, jedoch haben wir bisher keine Angaben zur Zeitauflösung gefunden.\vspace{10pt}\\
 \textbf{Zur Koinzidenzmessung}\\
 Es besteht die Möglichkeit, die Quellstärke $Q$ von Cobalt-60 nachzukontrollieren, wenn die Masse der im Versuch verwendeten Probe bekannt ist.\\
-Wie in der Durchführung besprochen, sind die Daten der Winkelkorrelation schlecht als Theoriebestätigung zu akzeptieren. Es liegt die Vermutung nahe, dass noch ein Schritt in der Durchführung fehlt, und zwar von den Zählraten den Hintergrundanteil aus den lognormalen Fits abzuziehen; dies würde die Zerfallsrate erniedrigen und möglicherweise die Theorie besser bestätigen. Die Gültigkeit dieses Ansatzes muss jedoch zunächst bestätigt werden, denn bisher sind noch keine theoretischen Modelle für die Hintergrundmechanismen gut bekannt außer der Comptonstreuung. Zu den Mechanismen zählen die Photononen aus der photolelektrischen Absorption und Hintergrundaktivitäten von unbekannten, unerwünschten Quellen. Gelingt es uns, gute theoretische Modelle für die Hintergrundmechanismen zu finden, wäre dann Ansatz, die lognormale Funktion bei den kalibrierten Maxima auszuwerten, und den Wert als Hintergrundprozess von den Zählraten der jeweiligen Detektoren abzuziehen. 
+Wie in der Durchführung besprochen, sind die Daten der Winkelkorrelation schlecht als Theoriebestätigung zu akzeptieren. Es liegt die Vermutung nahe, dass noch ein Schritt in der Durchführung fehlt, und zwar von den Zählraten den Hintergrundanteil aus den lognormalen Fits abzuziehen; dies würde die Zerfallsrate erniedrigen und möglicherweise die Theorie besser bestätigen. Die Gültigkeit dieses Ansatzes muss jedoch zunächst bestätigt werden, denn bisher sind noch keine theoretischen Modelle für die Hintergrundmechanismen gut bekannt außer der Comptonstreuung. Zu den Mechanismen zählen die Photonen aus der photolelektrischen Absorption und Hintergrundaktivitäten von unbekannten, unerwünschten Quellen. Gelingt es uns, gute theoretische Modelle für die Hintergrundmechanismen zu finden, wäre dann der Ansatz die lognormale Funktion bei den kalibrierten Maxima auszuwerten und den Wert als Hintergrundprozess von den Zählraten der jeweiligen Detektoren abzuziehen. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

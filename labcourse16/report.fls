@@ -1425,6 +1425,7 @@ INPUT ./report.toc
 INPUT report.toc
 INPUT report.toc
 OUTPUT report.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplri.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplb.tfm
 INPUT ./images/Decay Sodium.png
 INPUT ./images/Decay Sodium.png
@@ -1448,7 +1449,6 @@ INPUT plots/Winkelkorrelationen.pdf
 INPUT ./plots/Winkelkorrelationen.pdf
 INPUT ./plots/Winkelkorrelationen.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/rm-qplri.tfm
 INPUT ./images/setting.jpg
 INPUT ./images/setting.jpg
 INPUT images/setting.jpg
